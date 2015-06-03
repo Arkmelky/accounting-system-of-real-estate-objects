@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="DataService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:31406/DataServices/DataService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:31406/DataServices/DataService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:31406/DataServices/DataService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Entities.DbModels" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IDataService_GetDeals_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDeals" />
+  </wsdl:message>
+  <wsdl:message name="IDataService_GetDeals_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDealsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataService_GetUsers_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUsers" />
+  </wsdl:message>
+  <wsdl:message name="IDataService_GetUsers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUsersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataService_GetObjectOfTransactions_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetObjectOfTransactions" />
+  </wsdl:message>
+  <wsdl:message name="IDataService_GetObjectOfTransactions_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetObjectOfTransactionsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataService_GetDealById_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDealById" />
+  </wsdl:message>
+  <wsdl:message name="IDataService_GetDealById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDealByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataService_GetUserById_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserById" />
+  </wsdl:message>
+  <wsdl:message name="IDataService_GetUserById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataService_GetObjectOfTransactionById_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetObjectOfTransactionById" />
+  </wsdl:message>
+  <wsdl:message name="IDataService_GetObjectOfTransactionById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetObjectOfTransactionByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataService_AddDeal_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddDeal" />
+  </wsdl:message>
+  <wsdl:message name="IDataService_AddDeal_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddDealResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataService_AddUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddUser" />
+  </wsdl:message>
+  <wsdl:message name="IDataService_AddUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataService_AddObjectOfTransaction_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddObjectOfTransaction" />
+  </wsdl:message>
+  <wsdl:message name="IDataService_AddObjectOfTransaction_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddObjectOfTransactionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataService_DeleteDeal_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteDeal" />
+  </wsdl:message>
+  <wsdl:message name="IDataService_DeleteDeal_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteDealResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataService_DeleteUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteUser" />
+  </wsdl:message>
+  <wsdl:message name="IDataService_DeleteUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataService_DeleteObjectOfTransaction_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteObjectOfTransaction" />
+  </wsdl:message>
+  <wsdl:message name="IDataService_DeleteObjectOfTransaction_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteObjectOfTransactionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataService_UpdateDeal_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateDeal" />
+  </wsdl:message>
+  <wsdl:message name="IDataService_UpdateDeal_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateDealResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataService_UpdateUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateUser" />
+  </wsdl:message>
+  <wsdl:message name="IDataService_UpdateUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataService_UpdateObjectOfTransaction_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateObjectOfTransaction" />
+  </wsdl:message>
+  <wsdl:message name="IDataService_UpdateObjectOfTransaction_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateObjectOfTransactionResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IDataService">
+    <wsdl:operation name="GetDeals">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataService/GetDeals" message="tns:IDataService_GetDeals_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataService/GetDealsResponse" message="tns:IDataService_GetDeals_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUsers">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataService/GetUsers" message="tns:IDataService_GetUsers_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataService/GetUsersResponse" message="tns:IDataService_GetUsers_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetObjectOfTransactions">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataService/GetObjectOfTransactions" message="tns:IDataService_GetObjectOfTransactions_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataService/GetObjectOfTransactionsResponse" message="tns:IDataService_GetObjectOfTransactions_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDealById">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataService/GetDealById" message="tns:IDataService_GetDealById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataService/GetDealByIdResponse" message="tns:IDataService_GetDealById_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserById">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataService/GetUserById" message="tns:IDataService_GetUserById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataService/GetUserByIdResponse" message="tns:IDataService_GetUserById_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetObjectOfTransactionById">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataService/GetObjectOfTransactionById" message="tns:IDataService_GetObjectOfTransactionById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataService/GetObjectOfTransactionByIdResponse" message="tns:IDataService_GetObjectOfTransactionById_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddDeal">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataService/AddDeal" message="tns:IDataService_AddDeal_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataService/AddDealResponse" message="tns:IDataService_AddDeal_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataService/AddUser" message="tns:IDataService_AddUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataService/AddUserResponse" message="tns:IDataService_AddUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddObjectOfTransaction">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataService/AddObjectOfTransaction" message="tns:IDataService_AddObjectOfTransaction_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataService/AddObjectOfTransactionResponse" message="tns:IDataService_AddObjectOfTransaction_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteDeal">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataService/DeleteDeal" message="tns:IDataService_DeleteDeal_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataService/DeleteDealResponse" message="tns:IDataService_DeleteDeal_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataService/DeleteUser" message="tns:IDataService_DeleteUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataService/DeleteUserResponse" message="tns:IDataService_DeleteUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteObjectOfTransaction">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataService/DeleteObjectOfTransaction" message="tns:IDataService_DeleteObjectOfTransaction_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataService/DeleteObjectOfTransactionResponse" message="tns:IDataService_DeleteObjectOfTransaction_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateDeal">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataService/UpdateDeal" message="tns:IDataService_UpdateDeal_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataService/UpdateDealResponse" message="tns:IDataService_UpdateDeal_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataService/UpdateUser" message="tns:IDataService_UpdateUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataService/UpdateUserResponse" message="tns:IDataService_UpdateUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateObjectOfTransaction">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataService/UpdateObjectOfTransaction" message="tns:IDataService_UpdateObjectOfTransaction_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataService/UpdateObjectOfTransactionResponse" message="tns:IDataService_UpdateObjectOfTransaction_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IDataService" type="tns:IDataService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetDeals">
+      <soap:operation soapAction="http://tempuri.org/IDataService/GetDeals" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUsers">
+      <soap:operation soapAction="http://tempuri.org/IDataService/GetUsers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetObjectOfTransactions">
+      <soap:operation soapAction="http://tempuri.org/IDataService/GetObjectOfTransactions" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDealById">
+      <soap:operation soapAction="http://tempuri.org/IDataService/GetDealById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserById">
+      <soap:operation soapAction="http://tempuri.org/IDataService/GetUserById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetObjectOfTransactionById">
+      <soap:operation soapAction="http://tempuri.org/IDataService/GetObjectOfTransactionById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddDeal">
+      <soap:operation soapAction="http://tempuri.org/IDataService/AddDeal" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddUser">
+      <soap:operation soapAction="http://tempuri.org/IDataService/AddUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddObjectOfTransaction">
+      <soap:operation soapAction="http://tempuri.org/IDataService/AddObjectOfTransaction" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteDeal">
+      <soap:operation soapAction="http://tempuri.org/IDataService/DeleteDeal" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteUser">
+      <soap:operation soapAction="http://tempuri.org/IDataService/DeleteUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteObjectOfTransaction">
+      <soap:operation soapAction="http://tempuri.org/IDataService/DeleteObjectOfTransaction" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateDeal">
+      <soap:operation soapAction="http://tempuri.org/IDataService/UpdateDeal" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateUser">
+      <soap:operation soapAction="http://tempuri.org/IDataService/UpdateUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateObjectOfTransaction">
+      <soap:operation soapAction="http://tempuri.org/IDataService/UpdateObjectOfTransaction" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="DataService">
+    <wsdl:port name="BasicHttpBinding_IDataService" binding="tns:BasicHttpBinding_IDataService">
+      <soap:address location="http://localhost:31406/DataServices/DataService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

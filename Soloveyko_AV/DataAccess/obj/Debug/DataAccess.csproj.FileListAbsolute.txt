@@ -1,0 +1,14 @@
+D:\!!!!!- Юнивер - !\6 сем\6 мой сем\ВСРПП курсач - норм, нужно сделать\Soloveyko_AV\DataAccess\bin\Debug\DataAccess.dll.config
+D:\!!!!!- Юнивер - !\6 сем\6 мой сем\ВСРПП курсач - норм, нужно сделать\Soloveyko_AV\DataAccess\bin\Debug\DataAccess.dll
+D:\!!!!!- Юнивер - !\6 сем\6 мой сем\ВСРПП курсач - норм, нужно сделать\Soloveyko_AV\DataAccess\bin\Debug\DataAccess.pdb
+D:\!!!!!- Юнивер - !\6 сем\6 мой сем\ВСРПП курсач - норм, нужно сделать\Soloveyko_AV\DataAccess\bin\Debug\Entities.dll
+D:\!!!!!- Юнивер - !\6 сем\6 мой сем\ВСРПП курсач - норм, нужно сделать\Soloveyko_AV\DataAccess\bin\Debug\EntityFramework.dll
+D:\!!!!!- Юнивер - !\6 сем\6 мой сем\ВСРПП курсач - норм, нужно сделать\Soloveyko_AV\DataAccess\bin\Debug\EntityFramework.SqlServer.dll
+D:\!!!!!- Юнивер - !\6 сем\6 мой сем\ВСРПП курсач - норм, нужно сделать\Soloveyko_AV\DataAccess\bin\Debug\Entities.pdb
+D:\!!!!!- Юнивер - !\6 сем\6 мой сем\ВСРПП курсач - норм, нужно сделать\Soloveyko_AV\DataAccess\bin\Debug\EntityFramework.xml
+D:\!!!!!- Юнивер - !\6 сем\6 мой сем\ВСРПП курсач - норм, нужно сделать\Soloveyko_AV\DataAccess\bin\Debug\EntityFramework.SqlServer.xml
+D:\!!!!!- Юнивер - !\6 сем\6 мой сем\ВСРПП курсач - норм, нужно сделать\Soloveyko_AV\DataAccess\obj\Debug\DataAccess.csprojResolveAssemblyReference.cache
+D:\!!!!!- Юнивер - !\6 сем\6 мой сем\ВСРПП курсач - норм, нужно сделать\Soloveyko_AV\DataAccess\obj\Debug\DataAccess.Migrations.InitialCreate.resources
+D:\!!!!!- Юнивер - !\6 сем\6 мой сем\ВСРПП курсач - норм, нужно сделать\Soloveyko_AV\DataAccess\obj\Debug\DataAccess.csproj.GenerateResource.Cache
+D:\!!!!!- Юнивер - !\6 сем\6 мой сем\ВСРПП курсач - норм, нужно сделать\Soloveyko_AV\DataAccess\obj\Debug\DataAccess.dll
+D:\!!!!!- Юнивер - !\6 сем\6 мой сем\ВСРПП курсач - норм, нужно сделать\Soloveyko_AV\DataAccess\obj\Debug\DataAccess.pdb
