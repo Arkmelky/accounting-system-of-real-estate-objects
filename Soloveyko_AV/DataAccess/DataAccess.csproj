@@ -57,6 +57,8 @@
       <DependentUpon>201506021027419_InitialCreate.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="ObjectConverter\DbConverter.cs" />
+    <Compile Include="ObjectConverter\ViewConverter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

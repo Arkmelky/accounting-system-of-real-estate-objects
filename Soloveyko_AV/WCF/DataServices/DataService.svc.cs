@@ -6,6 +6,8 @@ using System.ServiceModel;
 using System.Text;
 using DataAccess;
 using Entities.DbModels;
+using Entities.ObjectConverter;
+using Entities.ViewModels;
 
 namespace WCF.DataServices
 {
@@ -13,17 +15,19 @@ namespace WCF.DataServices
     // NOTE: In order to launch WCF Test Client for testing this service, please select DataService.svc or DataService.svc.cs at the Solution Explorer and start debugging.
     public class DataService : IDataService
     {
-        public IQueryable<Deal> GetDeals()
+        public List<ViewDeal> GetDeals()
         {
-            return DataManager.GetDealsFromDb();
+            
+            return ViewConverter.ConvertListOfDeals(DataManager.GetDealsFromDb());
         }
-        public List<User> GetUsers()
+        public List<ViewUser> GetUsers()
         {
-            return DataManager.GetUsersFromDb();
+            return ViewConverter.ConverListOfUsers(DataManager.GetUsersFromDb());
+                //List<User> {new User{UserID = 1,Name = "123",Surname = "123",PhoneNumber = "123",Email = "123"}}; //
         }
-        public IQueryable<ObjectOfTransaction> GetObjectOfTransactions()
+        public List<ViewObjOfTransact> GetObjectOfTransactions()
         {
-            return DataManager.GetObjectOfTransactionsFromDb();
+            return ViewConverter.ConvertListObjOfTransacts(DataManager.GetObjectOfTransactionsFromDb());
         }
 
         public Deal GetDealById(int id)

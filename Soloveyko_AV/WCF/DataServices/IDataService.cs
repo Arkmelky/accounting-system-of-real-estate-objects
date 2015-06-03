@@ -5,6 +5,7 @@ using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.Text;
 using Entities.DbModels;
+using Entities.ViewModels;
 
 namespace WCF.DataServices
 {
@@ -13,11 +14,11 @@ namespace WCF.DataServices
     public interface IDataService
     {
         [OperationContract]
-        IQueryable<Deal> GetDeals();
+        List<ViewDeal> GetDeals();
         [OperationContract]
-        List<User> GetUsers();
+        List<ViewUser> GetUsers();
         [OperationContract]
-        IQueryable<ObjectOfTransaction> GetObjectOfTransactions();
+        List<ViewObjOfTransact> GetObjectOfTransactions();
 
         [OperationContract]
         Deal GetDealById(int id);

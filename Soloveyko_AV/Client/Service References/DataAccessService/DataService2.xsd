@@ -1,63 +1,62 @@
 <?xml version="1.0" encoding="utf-8"?>
-<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Entities.DbModels" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Entities.DbModels" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-  <xs:complexType name="ArrayOfDeal">
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Entities.ViewModels" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Entities.ViewModels" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:31406/DataServices/DataService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Entities.SupportEntities" />
+  <xs:complexType name="ArrayOfViewDeal">
     <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="Deal" nillable="true" type="tns:Deal" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ViewDeal" nillable="true" type="tns:ViewDeal" />
     </xs:sequence>
   </xs:complexType>
-  <xs:element name="ArrayOfDeal" nillable="true" type="tns:ArrayOfDeal" />
-  <xs:complexType name="Deal">
+  <xs:element name="ArrayOfViewDeal" nillable="true" type="tns:ArrayOfViewDeal" />
+  <xs:complexType name="ViewDeal">
     <xs:sequence>
-      <xs:element minOccurs="0" name="Buyer" nillable="true" type="tns:User" />
+      <xs:element minOccurs="0" name="BuyerInfo" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Buyer_UserID" type="xs:int" />
       <xs:element minOccurs="0" name="DateOfDeal" type="xs:dateTime" />
       <xs:element minOccurs="0" name="DealID" type="xs:int" />
-      <xs:element minOccurs="0" name="KindOfCalculatingID" type="xs:int" />
-      <xs:element minOccurs="0" name="ObjectOfTransaction" nillable="true" type="tns:ObjectOfTransaction" />
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Entities.SupportEntities" minOccurs="0" name="KindOfCalculatingID" type="q1:EnumKindOfCalculating" />
       <xs:element minOccurs="0" name="ObjectOfTransactionID" type="xs:int" />
+      <xs:element minOccurs="0" name="ObjectOfTransactionInfo" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="PersonalNumberOfDeal" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="Seller" nillable="true" type="tns:User" />
+      <xs:element minOccurs="0" name="SellerInfo" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Seller_UserID" type="xs:int" />
       <xs:element minOccurs="0" name="TransactionAmount" type="xs:decimal" />
     </xs:sequence>
   </xs:complexType>
-  <xs:element name="Deal" nillable="true" type="tns:Deal" />
-  <xs:complexType name="User">
+  <xs:element name="ViewDeal" nillable="true" type="tns:ViewDeal" />
+  <xs:complexType name="ArrayOfViewUser">
     <xs:sequence>
-      <xs:element minOccurs="0" name="Deals" nillable="true" type="tns:ArrayOfDeal" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ViewUser" nillable="true" type="tns:ViewUser" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfViewUser" nillable="true" type="tns:ArrayOfViewUser" />
+  <xs:complexType name="ViewUser">
+    <xs:sequence>
       <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="ObjectOfTransactions" nillable="true" type="tns:ArrayOfObjectOfTransaction" />
       <xs:element minOccurs="0" name="PhoneNumber" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Surname" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="UserID" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
-  <xs:element name="User" nillable="true" type="tns:User" />
-  <xs:complexType name="ArrayOfObjectOfTransaction">
+  <xs:element name="ViewUser" nillable="true" type="tns:ViewUser" />
+  <xs:complexType name="ArrayOfViewObjOfTransact">
     <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="ObjectOfTransaction" nillable="true" type="tns:ObjectOfTransaction" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ViewObjOfTransact" nillable="true" type="tns:ViewObjOfTransact" />
     </xs:sequence>
   </xs:complexType>
-  <xs:element name="ArrayOfObjectOfTransaction" nillable="true" type="tns:ArrayOfObjectOfTransaction" />
-  <xs:complexType name="ObjectOfTransaction">
+  <xs:element name="ArrayOfViewObjOfTransact" nillable="true" type="tns:ArrayOfViewObjOfTransact" />
+  <xs:complexType name="ViewObjOfTransact">
     <xs:sequence>
       <xs:element minOccurs="0" name="Cost" type="xs:decimal" />
       <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="KindOfCalculatingID" type="xs:int" />
+      <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Entities.SupportEntities" minOccurs="0" name="KindOfCalculating" type="q2:EnumKindOfCalculating" />
       <xs:element minOccurs="0" name="ObjectOfTransactionID" type="xs:int" />
-      <xs:element minOccurs="0" name="ObjectStateID" type="xs:int" />
-      <xs:element minOccurs="0" name="ObjectTypeID" type="xs:int" />
-      <xs:element minOccurs="0" name="ServiceTypeID" type="xs:int" />
-      <xs:element minOccurs="0" name="User" nillable="true" type="tns:User" />
+      <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Entities.SupportEntities" minOccurs="0" name="ObjectState" type="q3:EnumObjectState" />
+      <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/Entities.SupportEntities" minOccurs="0" name="ObjectType" type="q4:EnumObjectType" />
+      <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/Entities.SupportEntities" minOccurs="0" name="ServiceType" type="q5:EnumServiceType" />
       <xs:element minOccurs="0" name="UserID" type="xs:int" />
+      <xs:element minOccurs="0" name="UserInfo" nillable="true" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
-  <xs:element name="ObjectOfTransaction" nillable="true" type="tns:ObjectOfTransaction" />
-  <xs:complexType name="ArrayOfUser">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="User" nillable="true" type="tns:User" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="ArrayOfUser" nillable="true" type="tns:ArrayOfUser" />
+  <xs:element name="ViewObjOfTransact" nillable="true" type="tns:ViewObjOfTransact" />
 </xs:schema>

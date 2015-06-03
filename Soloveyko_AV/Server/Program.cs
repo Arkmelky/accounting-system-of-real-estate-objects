@@ -22,12 +22,7 @@ namespace Server
             Console.WriteLine("Service started.");
             Console.WriteLine("Press eny key for close the server...");
 
-            var data = DataManager.GetUsersFromDb();
-            foreach (var user in data)
-            {
-                Console.WriteLine(user.ToString());
-            }
-
+            
             Console.ReadLine();
             host1.Close();
         }
@@ -35,7 +30,12 @@ namespace Server
 }
 
 /*
- 
+ var data = DataManager.GetUsersFromDb();
+            foreach (var user in data)
+            {
+                Console.WriteLine(user.ToString());
+            }
+
  */
 /*
  

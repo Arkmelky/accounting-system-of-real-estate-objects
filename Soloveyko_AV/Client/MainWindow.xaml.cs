@@ -30,9 +30,11 @@ namespace Client
         {
             using (var dataAccess = new DataServiceClient())
             {
-                var some = dataAccess.GetUsers();
-                DataGrid_1.ItemsSource = some;
-            }
+                DataGrid_Users.ItemsSource = dataAccess.GetUsers();
+                DataGrid_ObjOfTransact.ItemsSource = dataAccess.GetObjectOfTransactions();
+                DataGrid_Deals.ItemsSource = dataAccess.GetDeals();
+
+            } //DataGrid_Users.Columns[1].Visibility = Visibility.Collapsed;
         }
 
         private void DataGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)

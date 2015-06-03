@@ -12,16 +12,18 @@ namespace DataAccess
     /// </summary>
     public static class DataManager
     {
+        //No Entity Framework provider found for the ADO.NET provider with invariant name 'System.Data.SqlClient'
+        //Dont add EF to client side!!!
 
         /// <summary>
         /// Get collections of objects from Database
         /// </summary>
         /// <returns></returns>
-        public static IQueryable<Deal> GetDealsFromDb()
+        public static List<Deal> GetDealsFromDb()
         {
             using (var db = new DB_Context())
             {
-                return db.Deals;
+                return db.Deals.ToList();
             }
         }
         public static List<User> GetUsersFromDb()
@@ -40,11 +42,11 @@ namespace DataAccess
             }
             
         }
-        public static IQueryable<ObjectOfTransaction> GetObjectOfTransactionsFromDb()
+        public static List<ObjectOfTransaction> GetObjectOfTransactionsFromDb()
         {
             using (var db = new DB_Context())
             {
-                return db.ObjectOfTransactions;
+                return db.ObjectOfTransactions.ToList();
             }
         }
 
