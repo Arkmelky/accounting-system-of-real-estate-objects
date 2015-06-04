@@ -35,9 +35,9 @@ namespace Entities.DbModels
 
         public override string ToString()
         {
-            return "ID = " + ObjectOfTransactionID +
-                   "\nCost = " + Cost +
-                   "\nDescription = " + Description;
+            return "ID: " + ObjectOfTransactionID +
+                   "\nCost: " + Cost +
+                   "\nDescription: " + Description;
         }
 
         //public ObjectType ObjectType { get; set; }

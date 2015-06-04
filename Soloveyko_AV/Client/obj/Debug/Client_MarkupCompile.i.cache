@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 G:\OOP\Курсовой_6сем\Soloveyko_AV\Client\App.xaml
-11151548125
+42093019697
 
-10-1816408138
+131124211127
 15946233354
-MainWindow.xaml;
+MainWindow.xaml;OtherWindows\DealWindow.xaml;OtherWindows\ObjOfTransactWindow.xaml;OtherWindows\UserWindow.xaml;
 
-True
+False
 

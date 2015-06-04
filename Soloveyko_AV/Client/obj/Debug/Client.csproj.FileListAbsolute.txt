@@ -27,3 +27,9 @@ G:\OOP\Курсовой_6сем\Soloveyko_AV\Client\obj\Debug\Client.g.resources
 G:\OOP\Курсовой_6сем\Soloveyko_AV\Client\obj\Debug\Client.Properties.Resources.resources
 G:\OOP\Курсовой_6сем\Soloveyko_AV\Client\obj\Debug\Client.csproj.GenerateResource.Cache
 G:\OOP\Курсовой_6сем\Soloveyko_AV\Client\obj\Debug\GeneratedInternalTypeHelper.g.cs
+G:\OOP\Курсовой_6сем\Soloveyko_AV\Client\obj\Debug\OtherWindows\DealWindow.baml
+G:\OOP\Курсовой_6сем\Soloveyko_AV\Client\obj\Debug\OtherWindows\ObjOfTransactWindow.baml
+G:\OOP\Курсовой_6сем\Soloveyko_AV\Client\obj\Debug\OtherWindows\UserWindow.baml
+G:\OOP\Курсовой_6сем\Soloveyko_AV\Client\obj\Debug\OtherWindows\DealWindow.g.cs
+G:\OOP\Курсовой_6сем\Soloveyko_AV\Client\obj\Debug\OtherWindows\ObjOfTransactWindow.g.cs
+G:\OOP\Курсовой_6сем\Soloveyko_AV\Client\obj\Debug\OtherWindows\UserWindow.g.cs

@@ -28,7 +28,11 @@ namespace Entities.DbModels
 
         public override string ToString()
         {
-            return UserID + Name + Surname + PhoneNumber + Email;
+            return "UserId: " + UserID +
+                   "\nName: " + Name +
+                   "\nSurname: " + Surname +
+                   "\nPhoneNumber: " + PhoneNumber +
+                   "\nEmail: " + Email;
         }
     }
 }
