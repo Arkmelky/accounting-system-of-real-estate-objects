@@ -43,17 +43,17 @@ namespace WCF.DataServices
             return DataManager.GetObjectOfTransactionFromDbById(id);
         }
 
-        public void AddDeal(Deal deal)
+        public void AddDeal(ViewDeal deal)
         {
-            DataManager.AddDealToDb(deal);
+            DataManager.AddDealToDb(DbConverter.ConvertDeal(deal));
         }
-        public void AddUser(User user)
+        public void AddUser(ViewUser user)
         {
-            DataManager.AddUserToDb(user);
+            DataManager.AddUserToDb(DbConverter.ConvertUser(user));
         }
-        public void AddObjectOfTransaction(ObjectOfTransaction objectOfTransaction)
+        public void AddObjectOfTransaction(ViewObjOfTransact objectOfTransaction)
         {
-            DataManager.AddObjectOfTransactionToDb(objectOfTransaction);
+            DataManager.AddObjectOfTransactionToDb(DbConverter.ConverObjOfTransaction(objectOfTransaction));
         }
 
         public void DeleteDeal(Deal deal)

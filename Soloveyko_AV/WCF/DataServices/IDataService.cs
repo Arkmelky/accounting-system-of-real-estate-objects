@@ -28,11 +28,11 @@ namespace WCF.DataServices
         ObjectOfTransaction GetObjectOfTransactionById(int id);
 
         [OperationContract]
-        void AddDeal(Deal deal);
+        void AddDeal(ViewDeal deal);
         [OperationContract]
-        void AddUser(User user);
+        void AddUser(ViewUser user);
         [OperationContract]
-        void AddObjectOfTransaction(ObjectOfTransaction objectOfTransaction);
+        void AddObjectOfTransaction(ViewObjOfTransact objectOfTransaction);
 
         [OperationContract]
         void DeleteDeal(Deal deal);
