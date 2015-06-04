@@ -12,3 +12,18 @@ D:\!!!!!- Юнивер - !\6 сем\6 мой сем\ВСРПП курсач - н
 D:\!!!!!- Юнивер - !\6 сем\6 мой сем\ВСРПП курсач - норм, нужно сделать\Soloveyko_AV\Client\obj\Debug\Client.csproj.GenerateResource.Cache
 D:\!!!!!- Юнивер - !\6 сем\6 мой сем\ВСРПП курсач - норм, нужно сделать\Soloveyko_AV\Client\obj\Debug\Client.exe
 D:\!!!!!- Юнивер - !\6 сем\6 мой сем\ВСРПП курсач - норм, нужно сделать\Soloveyko_AV\Client\obj\Debug\Client.pdb
+G:\OOP\Курсовой_6сем\Soloveyko_AV\Client\bin\Debug\Client.exe.config
+G:\OOP\Курсовой_6сем\Soloveyko_AV\Client\obj\Debug\Client.exe
+G:\OOP\Курсовой_6сем\Soloveyko_AV\Client\obj\Debug\Client.pdb
+G:\OOP\Курсовой_6сем\Soloveyko_AV\Client\bin\Debug\Client.exe
+G:\OOP\Курсовой_6сем\Soloveyko_AV\Client\bin\Debug\Client.pdb
+G:\OOP\Курсовой_6сем\Soloveyko_AV\Client\obj\Debug\Client.csprojResolveAssemblyReference.cache
+G:\OOP\Курсовой_6сем\Soloveyko_AV\Client\obj\Debug\MainWindow.g.cs
+G:\OOP\Курсовой_6сем\Soloveyko_AV\Client\obj\Debug\App.g.cs
+G:\OOP\Курсовой_6сем\Soloveyko_AV\Client\obj\Debug\Client_MarkupCompile.cache
+G:\OOP\Курсовой_6сем\Soloveyko_AV\Client\obj\Debug\Client_MarkupCompile.lref
+G:\OOP\Курсовой_6сем\Soloveyko_AV\Client\obj\Debug\MainWindow.baml
+G:\OOP\Курсовой_6сем\Soloveyko_AV\Client\obj\Debug\Client.g.resources
+G:\OOP\Курсовой_6сем\Soloveyko_AV\Client\obj\Debug\Client.Properties.Resources.resources
+G:\OOP\Курсовой_6сем\Soloveyko_AV\Client\obj\Debug\Client.csproj.GenerateResource.Cache
+G:\OOP\Курсовой_6сем\Soloveyko_AV\Client\obj\Debug\GeneratedInternalTypeHelper.g.cs

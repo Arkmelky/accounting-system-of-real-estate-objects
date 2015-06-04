@@ -7,3 +7,13 @@ D:\!!!!!- Юнивер - !\6 сем\6 мой сем\ВСРПП курсач - н
 D:\!!!!!- Юнивер - !\6 сем\6 мой сем\ВСРПП курсач - норм, нужно сделать\Soloveyko_AV\Entities\bin\Debug\EntityFramework.SqlServer.xml
 D:\!!!!!- Юнивер - !\6 сем\6 мой сем\ВСРПП курсач - норм, нужно сделать\Soloveyko_AV\Entities\obj\Debug\Entities.dll
 D:\!!!!!- Юнивер - !\6 сем\6 мой сем\ВСРПП курсач - норм, нужно сделать\Soloveyko_AV\Entities\obj\Debug\Entities.pdb
+G:\OOP\Курсовой_6сем\Soloveyko_AV\Entities\bin\Debug\Entities.dll.config
+G:\OOP\Курсовой_6сем\Soloveyko_AV\Entities\bin\Debug\Entities.dll
+G:\OOP\Курсовой_6сем\Soloveyko_AV\Entities\bin\Debug\Entities.pdb
+G:\OOP\Курсовой_6сем\Soloveyko_AV\Entities\bin\Debug\EntityFramework.dll
+G:\OOP\Курсовой_6сем\Soloveyko_AV\Entities\bin\Debug\EntityFramework.SqlServer.dll
+G:\OOP\Курсовой_6сем\Soloveyko_AV\Entities\bin\Debug\EntityFramework.xml
+G:\OOP\Курсовой_6сем\Soloveyko_AV\Entities\bin\Debug\EntityFramework.SqlServer.xml
+G:\OOP\Курсовой_6сем\Soloveyko_AV\Entities\obj\Debug\Entities.csprojResolveAssemblyReference.cache
+G:\OOP\Курсовой_6сем\Soloveyko_AV\Entities\obj\Debug\Entities.dll
+G:\OOP\Курсовой_6сем\Soloveyko_AV\Entities\obj\Debug\Entities.pdb

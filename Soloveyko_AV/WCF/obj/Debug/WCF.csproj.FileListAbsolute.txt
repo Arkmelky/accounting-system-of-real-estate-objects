@@ -9,3 +9,14 @@ D:\!!!!!- Юнивер - !\6 сем\6 мой сем\ВСРПП курсач - н
 D:\!!!!!- Юнивер - !\6 сем\6 мой сем\ВСРПП курсач - норм, нужно сделать\Soloveyko_AV\WCF\obj\Debug\WCF.csprojResolveAssemblyReference.cache
 D:\!!!!!- Юнивер - !\6 сем\6 мой сем\ВСРПП курсач - норм, нужно сделать\Soloveyko_AV\WCF\obj\Debug\WCF.dll
 D:\!!!!!- Юнивер - !\6 сем\6 мой сем\ВСРПП курсач - норм, нужно сделать\Soloveyko_AV\WCF\obj\Debug\WCF.pdb
+G:\OOP\Курсовой_6сем\Soloveyko_AV\WCF\bin\WCF.dll
+G:\OOP\Курсовой_6сем\Soloveyko_AV\WCF\bin\WCF.pdb
+G:\OOP\Курсовой_6сем\Soloveyko_AV\WCF\bin\DataAccess.dll
+G:\OOP\Курсовой_6сем\Soloveyko_AV\WCF\bin\Entities.dll
+G:\OOP\Курсовой_6сем\Soloveyko_AV\WCF\bin\EntityFramework.dll
+G:\OOP\Курсовой_6сем\Soloveyko_AV\WCF\bin\DataAccess.pdb
+G:\OOP\Курсовой_6сем\Soloveyko_AV\WCF\bin\Entities.pdb
+G:\OOP\Курсовой_6сем\Soloveyko_AV\WCF\bin\EntityFramework.xml
+G:\OOP\Курсовой_6сем\Soloveyko_AV\WCF\obj\Debug\WCF.csprojResolveAssemblyReference.cache
+G:\OOP\Курсовой_6сем\Soloveyko_AV\WCF\obj\Debug\WCF.dll
+G:\OOP\Курсовой_6сем\Soloveyko_AV\WCF\obj\Debug\WCF.pdb

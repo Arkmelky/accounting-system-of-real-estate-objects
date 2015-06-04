@@ -30,9 +30,16 @@ namespace Client
         {
             using (var dataAccess = new DataServiceClient())
             {
-                DataGrid_Users.ItemsSource = dataAccess.GetUsers();
+                List<ViewUser> data;
+                data = dataAccess.GetUsers().ToList();
+                DataGrid_Users.ItemsSource = data;
+                //DataGrid_Users.Columns[0].Visibility = Visibility.Hidden;
+
                 DataGrid_ObjOfTransact.ItemsSource = dataAccess.GetObjectOfTransactions();
+                //DataGrid_ObjOfTransact.Columns[0].Visibility = Visibility.Hidden;
+
                 DataGrid_Deals.ItemsSource = dataAccess.GetDeals();
+                //DataGrid_Deals.Columns[0].Visibility = Visibility.Hidden;
 
             } //DataGrid_Users.Columns[1].Visibility = Visibility.Collapsed;
         }

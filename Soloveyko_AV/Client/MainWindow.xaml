@@ -7,13 +7,60 @@
         <Button Content="Button" HorizontalAlignment="Left" Margin="402,185,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
         <TabControl HorizontalAlignment="Left" Height="300" Margin="10,10,0,0" VerticalAlignment="Top" Width="387">
             <TabItem Header="Users">
-                <DataGrid Name="DataGrid_Users" Background="#FFE5E5E5"/>
+                <DataGrid Name="DataGrid_Users" Background="#FFE5E5E5" AutoGenerateColumns="False">
+                    <DataGrid.DataContext>
+                        <DataAccessService:ViewUser/>
+                    </DataGrid.DataContext>
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="UserID" Binding="{Binding UserID}"/>
+                        <DataGridTextColumn Header="Name" Binding="{Binding Name}"/>
+                        <DataGridTextColumn Header="Surname" Binding="{Binding Surname}"/>
+                        <DataGridTextColumn Header="PhoneNumber" Binding="{Binding PhoneNumber}"/>
+                        <DataGridTextColumn Header="Email" Binding="{Binding Email}"/>
+                    </DataGrid.Columns>
+                </DataGrid>
             </TabItem>
             <TabItem Header="ObjOfTransact">
-                <DataGrid Name="DataGrid_ObjOfTransact" Background="#FFE5E5E5"/>
+                <DataGrid Name="DataGrid_ObjOfTransact" Background="#FFE5E5E5" AutoGenerateColumns="False">
+                    <DataGrid.DataContext>
+                        <DataAccessService:ViewObjOfTransact/>
+                    </DataGrid.DataContext>
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="ObjID" Binding="{Binding ObjectOfTransactionID}"/>
+                        <DataGridTextColumn Header="UserID" Binding="{Binding UserID}"/>
+                        <DataGridTextColumn Header="UserInfo" Binding="{Binding UserInfo}"/>
+                        
+                        <DataGridTextColumn Header="ObjectType" Binding="{Binding ObjectType}"/>
+                        <DataGridTextColumn Header="ServiceType" Binding="{Binding ServiceType}"/>
+                        <DataGridTextColumn Header="KindOfCalculating" Binding="{Binding KindOfCalculating}"/>
+                        <DataGridTextColumn Header="ObjectState" Binding="{Binding ObjectState}"/>
+                        
+                        <DataGridTextColumn Header="Cost" Binding="{Binding Cost}"/>
+                        <DataGridTextColumn Header="Description" Binding="{Binding Description}"/>
+                    </DataGrid.Columns>
+                </DataGrid>
             </TabItem>
             <TabItem Header="Deals">
-                <DataGrid Name="DataGrid_Deals" Background="#FFE5E5E5"/>
+                <DataGrid Name="DataGrid_Deals" Background="#FFE5E5E5" AutoGenerateColumns="False">
+                    <DataGrid.DataContext>
+                        <DataAccessService:ViewDeal/>
+                    </DataGrid.DataContext>
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="DealID" Binding="{Binding DealID}"/>
+                        <DataGridTextColumn Header="ObjectOfTransactionID" Binding="{Binding ObjectOfTransactionID}"/>
+                        <DataGridTextColumn Header="Seller_UserID" Binding="{Binding Seller_UserID}"/>
+                        <DataGridTextColumn Header="Buyer_UserID" Binding="{Binding Buyer_UserID}"/>
+
+                        <DataGridTextColumn Header="PersonalNumberOfDeal" Binding="{Binding PersonalNumberOfDeal}"/>
+                        <DataGridTextColumn Header="SellerInfo" Binding="{Binding SellerInfo}"/>
+                        <DataGridTextColumn Header="BuyerInfo" Binding="{Binding BuyerInfo}"/>
+                        <DataGridTextColumn Header="ObjectOfTransactionInfo" Binding="{Binding ObjectOfTransactionInfo}"/>
+
+                        <DataGridTextColumn Header="KindOfCalculatingID" Binding="{Binding KindOfCalculatingID}"/>
+                        <DataGridTextColumn Header="DateOfDeal" Binding="{Binding DateOfDeal}"/>
+                        <DataGridTextColumn Header="TransactionAmount" Binding="{Binding TransactionAmount}"/>
+                    </DataGrid.Columns>
+                </DataGrid>
             </TabItem>
         </TabControl>
 

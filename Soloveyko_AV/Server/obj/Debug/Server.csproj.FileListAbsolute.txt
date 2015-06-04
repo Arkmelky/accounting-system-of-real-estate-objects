@@ -14,3 +14,19 @@ D:\!!!!!- Юнивер - !\6 сем\6 мой сем\ВСРПП курсач - н
 D:\!!!!!- Юнивер - !\6 сем\6 мой сем\ВСРПП курсач - норм, нужно сделать\Soloveyko_AV\Server\obj\Debug\Server.csprojResolveAssemblyReference.cache
 D:\!!!!!- Юнивер - !\6 сем\6 мой сем\ВСРПП курсач - норм, нужно сделать\Soloveyko_AV\Server\obj\Debug\Server.exe
 D:\!!!!!- Юнивер - !\6 сем\6 мой сем\ВСРПП курсач - норм, нужно сделать\Soloveyko_AV\Server\obj\Debug\Server.pdb
+G:\OOP\Курсовой_6сем\Soloveyko_AV\Server\bin\Debug\Server.exe.config
+G:\OOP\Курсовой_6сем\Soloveyko_AV\Server\obj\Debug\Server.exe
+G:\OOP\Курсовой_6сем\Soloveyko_AV\Server\obj\Debug\Server.pdb
+G:\OOP\Курсовой_6сем\Soloveyko_AV\Server\bin\Debug\Server.exe
+G:\OOP\Курсовой_6сем\Soloveyko_AV\Server\bin\Debug\Server.pdb
+G:\OOP\Курсовой_6сем\Soloveyko_AV\Server\bin\Debug\DataAccess.dll
+G:\OOP\Курсовой_6сем\Soloveyko_AV\Server\bin\Debug\Entities.dll
+G:\OOP\Курсовой_6сем\Soloveyko_AV\Server\bin\Debug\EntityFramework.dll
+G:\OOP\Курсовой_6сем\Soloveyko_AV\Server\bin\Debug\EntityFramework.SqlServer.dll
+G:\OOP\Курсовой_6сем\Soloveyko_AV\Server\bin\Debug\WCF.dll
+G:\OOP\Курсовой_6сем\Soloveyko_AV\Server\bin\Debug\DataAccess.pdb
+G:\OOP\Курсовой_6сем\Soloveyko_AV\Server\bin\Debug\Entities.pdb
+G:\OOP\Курсовой_6сем\Soloveyko_AV\Server\bin\Debug\WCF.pdb
+G:\OOP\Курсовой_6сем\Soloveyko_AV\Server\bin\Debug\EntityFramework.xml
+G:\OOP\Курсовой_6сем\Soloveyko_AV\Server\bin\Debug\EntityFramework.SqlServer.xml
+G:\OOP\Курсовой_6сем\Soloveyko_AV\Server\obj\Debug\Server.csprojResolveAssemblyReference.cache

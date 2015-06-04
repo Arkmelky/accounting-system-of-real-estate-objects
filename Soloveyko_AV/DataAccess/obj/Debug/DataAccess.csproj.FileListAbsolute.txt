@@ -12,3 +12,17 @@ D:\!!!!!- Юнивер - !\6 сем\6 мой сем\ВСРПП курсач - н
 D:\!!!!!- Юнивер - !\6 сем\6 мой сем\ВСРПП курсач - норм, нужно сделать\Soloveyko_AV\DataAccess\obj\Debug\DataAccess.csproj.GenerateResource.Cache
 D:\!!!!!- Юнивер - !\6 сем\6 мой сем\ВСРПП курсач - норм, нужно сделать\Soloveyko_AV\DataAccess\obj\Debug\DataAccess.dll
 D:\!!!!!- Юнивер - !\6 сем\6 мой сем\ВСРПП курсач - норм, нужно сделать\Soloveyko_AV\DataAccess\obj\Debug\DataAccess.pdb
+G:\OOP\Курсовой_6сем\Soloveyko_AV\DataAccess\bin\Debug\DataAccess.dll.config
+G:\OOP\Курсовой_6сем\Soloveyko_AV\DataAccess\bin\Debug\DataAccess.dll
+G:\OOP\Курсовой_6сем\Soloveyko_AV\DataAccess\bin\Debug\DataAccess.pdb
+G:\OOP\Курсовой_6сем\Soloveyko_AV\DataAccess\bin\Debug\Entities.dll
+G:\OOP\Курсовой_6сем\Soloveyko_AV\DataAccess\bin\Debug\EntityFramework.dll
+G:\OOP\Курсовой_6сем\Soloveyko_AV\DataAccess\bin\Debug\EntityFramework.SqlServer.dll
+G:\OOP\Курсовой_6сем\Soloveyko_AV\DataAccess\bin\Debug\Entities.pdb
+G:\OOP\Курсовой_6сем\Soloveyko_AV\DataAccess\bin\Debug\EntityFramework.xml
+G:\OOP\Курсовой_6сем\Soloveyko_AV\DataAccess\bin\Debug\EntityFramework.SqlServer.xml
+G:\OOP\Курсовой_6сем\Soloveyko_AV\DataAccess\obj\Debug\DataAccess.csprojResolveAssemblyReference.cache
+G:\OOP\Курсовой_6сем\Soloveyko_AV\DataAccess\obj\Debug\DataAccess.Migrations.InitialCreate.resources
+G:\OOP\Курсовой_6сем\Soloveyko_AV\DataAccess\obj\Debug\DataAccess.csproj.GenerateResource.Cache
+G:\OOP\Курсовой_6сем\Soloveyko_AV\DataAccess\obj\Debug\DataAccess.dll
+G:\OOP\Курсовой_6сем\Soloveyko_AV\DataAccess\obj\Debug\DataAccess.pdb
