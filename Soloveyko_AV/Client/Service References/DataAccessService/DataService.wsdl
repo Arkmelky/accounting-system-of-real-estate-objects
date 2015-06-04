@@ -7,6 +7,7 @@
       <xsd:import schemaLocation="http://localhost:31406/DataServices/DataService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Entities.ViewModels" />
       <xsd:import schemaLocation="http://localhost:31406/DataServices/DataService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Entities.SupportEntities" />
       <xsd:import schemaLocation="http://localhost:31406/DataServices/DataService.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/Entities.DbModels" />
+      <xsd:import schemaLocation="http://localhost:31406/DataServices/DataService.svc?xsd=xsd5" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
     </xsd:schema>
   </wsdl:types>
   <wsdl:message name="IDataService_GetDeals_InputMessage">
@@ -99,6 +100,18 @@
   <wsdl:message name="IDataService_UpdateObjectOfTransaction_OutputMessage">
     <wsdl:part name="parameters" element="tns:UpdateObjectOfTransactionResponse" />
   </wsdl:message>
+  <wsdl:message name="IDataService_GetUsersId_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUsersId" />
+  </wsdl:message>
+  <wsdl:message name="IDataService_GetUsersId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUsersIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataService_GetObjOfTransactId_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetObjOfTransactId" />
+  </wsdl:message>
+  <wsdl:message name="IDataService_GetObjOfTransactId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetObjOfTransactIdResponse" />
+  </wsdl:message>
   <wsdl:portType name="IDataService">
     <wsdl:operation name="GetDeals">
       <wsdl:input wsaw:Action="http://tempuri.org/IDataService/GetDeals" message="tns:IDataService_GetDeals_InputMessage" />
@@ -159,6 +172,14 @@
     <wsdl:operation name="UpdateObjectOfTransaction">
       <wsdl:input wsaw:Action="http://tempuri.org/IDataService/UpdateObjectOfTransaction" message="tns:IDataService_UpdateObjectOfTransaction_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IDataService/UpdateObjectOfTransactionResponse" message="tns:IDataService_UpdateObjectOfTransaction_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUsersId">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataService/GetUsersId" message="tns:IDataService_GetUsersId_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataService/GetUsersIdResponse" message="tns:IDataService_GetUsersId_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetObjOfTransactId">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataService/GetObjOfTransactId" message="tns:IDataService_GetObjOfTransactId_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataService/GetObjOfTransactIdResponse" message="tns:IDataService_GetObjOfTransactId_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IDataService" type="tns:IDataService">
@@ -291,6 +312,24 @@
     </wsdl:operation>
     <wsdl:operation name="UpdateObjectOfTransaction">
       <soap:operation soapAction="http://tempuri.org/IDataService/UpdateObjectOfTransaction" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUsersId">
+      <soap:operation soapAction="http://tempuri.org/IDataService/GetUsersId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetObjOfTransactId">
+      <soap:operation soapAction="http://tempuri.org/IDataService/GetObjOfTransactId" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

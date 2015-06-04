@@ -1113,22 +1113,22 @@ namespace Client.DataAccessService {
         System.Threading.Tasks.Task<Client.DataAccessService.ObjectOfTransaction> GetObjectOfTransactionByIdAsync(int id);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IDataService/AddDeal", ReplyAction="http://tempuri.org/IDataService/AddDealResponse")]
-        void AddDeal(Client.DataAccessService.Deal deal);
+        void AddDeal(Client.DataAccessService.ViewDeal deal);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IDataService/AddDeal", ReplyAction="http://tempuri.org/IDataService/AddDealResponse")]
-        System.Threading.Tasks.Task AddDealAsync(Client.DataAccessService.Deal deal);
+        System.Threading.Tasks.Task AddDealAsync(Client.DataAccessService.ViewDeal deal);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IDataService/AddUser", ReplyAction="http://tempuri.org/IDataService/AddUserResponse")]
-        void AddUser(Client.DataAccessService.User user);
+        void AddUser(Client.DataAccessService.ViewUser user);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IDataService/AddUser", ReplyAction="http://tempuri.org/IDataService/AddUserResponse")]
-        System.Threading.Tasks.Task AddUserAsync(Client.DataAccessService.User user);
+        System.Threading.Tasks.Task AddUserAsync(Client.DataAccessService.ViewUser user);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IDataService/AddObjectOfTransaction", ReplyAction="http://tempuri.org/IDataService/AddObjectOfTransactionResponse")]
-        void AddObjectOfTransaction(Client.DataAccessService.ObjectOfTransaction objectOfTransaction);
+        void AddObjectOfTransaction(Client.DataAccessService.ViewObjOfTransact objectOfTransaction);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IDataService/AddObjectOfTransaction", ReplyAction="http://tempuri.org/IDataService/AddObjectOfTransactionResponse")]
-        System.Threading.Tasks.Task AddObjectOfTransactionAsync(Client.DataAccessService.ObjectOfTransaction objectOfTransaction);
+        System.Threading.Tasks.Task AddObjectOfTransactionAsync(Client.DataAccessService.ViewObjOfTransact objectOfTransaction);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IDataService/DeleteDeal", ReplyAction="http://tempuri.org/IDataService/DeleteDealResponse")]
         void DeleteDeal(Client.DataAccessService.Deal deal);
@@ -1165,6 +1165,18 @@ namespace Client.DataAccessService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IDataService/UpdateObjectOfTransaction", ReplyAction="http://tempuri.org/IDataService/UpdateObjectOfTransactionResponse")]
         System.Threading.Tasks.Task UpdateObjectOfTransactionAsync(Client.DataAccessService.ObjectOfTransaction objectOfTransaction);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IDataService/GetUsersId", ReplyAction="http://tempuri.org/IDataService/GetUsersIdResponse")]
+        int[] GetUsersId();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IDataService/GetUsersId", ReplyAction="http://tempuri.org/IDataService/GetUsersIdResponse")]
+        System.Threading.Tasks.Task<int[]> GetUsersIdAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IDataService/GetObjOfTransactId", ReplyAction="http://tempuri.org/IDataService/GetObjOfTransactIdResponse")]
+        int[] GetObjOfTransactId();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IDataService/GetObjOfTransactId", ReplyAction="http://tempuri.org/IDataService/GetObjOfTransactIdResponse")]
+        System.Threading.Tasks.Task<int[]> GetObjOfTransactIdAsync();
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -1242,27 +1254,27 @@ namespace Client.DataAccessService {
             return base.Channel.GetObjectOfTransactionByIdAsync(id);
         }
         
-        public void AddDeal(Client.DataAccessService.Deal deal) {
+        public void AddDeal(Client.DataAccessService.ViewDeal deal) {
             base.Channel.AddDeal(deal);
         }
         
-        public System.Threading.Tasks.Task AddDealAsync(Client.DataAccessService.Deal deal) {
+        public System.Threading.Tasks.Task AddDealAsync(Client.DataAccessService.ViewDeal deal) {
             return base.Channel.AddDealAsync(deal);
         }
         
-        public void AddUser(Client.DataAccessService.User user) {
+        public void AddUser(Client.DataAccessService.ViewUser user) {
             base.Channel.AddUser(user);
         }
         
-        public System.Threading.Tasks.Task AddUserAsync(Client.DataAccessService.User user) {
+        public System.Threading.Tasks.Task AddUserAsync(Client.DataAccessService.ViewUser user) {
             return base.Channel.AddUserAsync(user);
         }
         
-        public void AddObjectOfTransaction(Client.DataAccessService.ObjectOfTransaction objectOfTransaction) {
+        public void AddObjectOfTransaction(Client.DataAccessService.ViewObjOfTransact objectOfTransaction) {
             base.Channel.AddObjectOfTransaction(objectOfTransaction);
         }
         
-        public System.Threading.Tasks.Task AddObjectOfTransactionAsync(Client.DataAccessService.ObjectOfTransaction objectOfTransaction) {
+        public System.Threading.Tasks.Task AddObjectOfTransactionAsync(Client.DataAccessService.ViewObjOfTransact objectOfTransaction) {
             return base.Channel.AddObjectOfTransactionAsync(objectOfTransaction);
         }
         
@@ -1312,6 +1324,22 @@ namespace Client.DataAccessService {
         
         public System.Threading.Tasks.Task UpdateObjectOfTransactionAsync(Client.DataAccessService.ObjectOfTransaction objectOfTransaction) {
             return base.Channel.UpdateObjectOfTransactionAsync(objectOfTransaction);
+        }
+        
+        public int[] GetUsersId() {
+            return base.Channel.GetUsersId();
+        }
+        
+        public System.Threading.Tasks.Task<int[]> GetUsersIdAsync() {
+            return base.Channel.GetUsersIdAsync();
+        }
+        
+        public int[] GetObjOfTransactId() {
+            return base.Channel.GetObjOfTransactId();
+        }
+        
+        public System.Threading.Tasks.Task<int[]> GetObjOfTransactIdAsync() {
+            return base.Channel.GetObjOfTransactIdAsync();
         }
     }
 }

@@ -25,30 +25,7 @@ namespace Client
         public MainWindow()
         {
             InitializeComponent();
-        }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            using (var dataAccess = new DataServiceClient())
-            {
-                DataGrid_Users.ItemsSource = dataAccess.GetUsers().ToList();
-                DataGrid_Users.IsReadOnly = true;
-                //DataGrid_Users.Columns[0].Visibility = Visibility.Hidden;
-
-                DataGrid_ObjOfTransact.ItemsSource = dataAccess.GetObjectOfTransactions();
-                DataGrid_ObjOfTransact.IsReadOnly = true;
-                //DataGrid_ObjOfTransact.Columns[0].Visibility = Visibility.Hidden;
-
-                DataGrid_Deals.ItemsSource = dataAccess.GetDeals();
-                DataGrid_Deals.IsReadOnly = true;
-                //DataGrid_Deals.Columns[0].Visibility = Visibility.Hidden;
-
-            } //DataGrid_Users.Columns[1].Visibility = Visibility.Collapsed;
-        }
-
-        private void DataGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-
+            UpdateData();
         }
 
         private void Button_Click_Add(object sender, RoutedEventArgs e)
@@ -58,21 +35,59 @@ namespace Client
                 var user = new ViewUser();
                 var userWindow = new UserWindow(user);
                 userWindow.ShowDialog();
-
-                using (var data = new DataServiceClient())
-                {
-                    data.AddUser(user);
-                }
+                UpdateUsers();
             }
             else if(TabItem_ObjOfTransact.IsSelected)
             {
-                var objOfTransactWindow = new ObjOfTransactWindow();
+                var objOfTransact = new ViewObjOfTransact();
+                var objOfTransactWindow = new ObjOfTransactWindow(objOfTransact);
                 objOfTransactWindow.ShowDialog();
+                UpdateObjectOfTransaction();
             }
             else if(TabItem_Deals.IsSelected)
             {
                 var dealWindow = new DealWindow();
                 dealWindow.ShowDialog();
+                UpdateDeals();
+            }
+        }
+
+        private void UpdateData()
+        {
+            using (var dataAccess = new DataServiceClient())
+            {
+                DataGrid_Users.ItemsSource = dataAccess.GetUsers().ToList();
+                DataGrid_Users.IsReadOnly = true;
+
+                DataGrid_ObjOfTransact.ItemsSource = dataAccess.GetObjectOfTransactions();
+                DataGrid_ObjOfTransact.IsReadOnly = true;
+                
+                DataGrid_Deals.ItemsSource = dataAccess.GetDeals();
+                DataGrid_Deals.IsReadOnly = true;
+            } 
+        }
+        private void UpdateUsers()
+        {
+            using (var dataAccess = new DataServiceClient())
+            {
+                DataGrid_Users.ItemsSource = dataAccess.GetUsers().ToList();
+                DataGrid_Users.IsReadOnly = true;
+            }
+        }
+        private void UpdateDeals()
+        {
+            using (var dataAccess = new DataServiceClient())
+            {
+                DataGrid_Deals.ItemsSource = dataAccess.GetDeals();
+                DataGrid_Deals.IsReadOnly = true;
+            }
+        }
+        private void UpdateObjectOfTransaction()
+        {
+            using (var dataAccess = new DataServiceClient())
+            {
+                DataGrid_ObjOfTransact.ItemsSource = dataAccess.GetObjectOfTransactions();
+                DataGrid_ObjOfTransact.IsReadOnly = true;
             }
         }
     }

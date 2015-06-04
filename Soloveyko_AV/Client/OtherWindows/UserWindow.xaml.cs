@@ -56,6 +56,13 @@ namespace Client.OtherWindows
             viewUser.Surname=TextBox_Surname.Text;
             viewUser.PhoneNumber = TextBox_PhoneNumber.Text;
             viewUser.Email = TextBox_Email.Text;
+
+            using (var data = new DataServiceClient())
+            {
+                data.AddUser(viewUser);
+            }
+
+            this.Close();
         }
 
         private void Button_Correct_Click(object sender, RoutedEventArgs e)
@@ -64,6 +71,13 @@ namespace Client.OtherWindows
             viewUser.Surname = TextBox_Surname.Text;
             viewUser.PhoneNumber = TextBox_PhoneNumber.Text;
             viewUser.Email = TextBox_Email.Text;
+
+            using (var data = new DataServiceClient())
+            {
+                data.AddUser(viewUser);
+            }
+
+            this.Close();
         }
         
 

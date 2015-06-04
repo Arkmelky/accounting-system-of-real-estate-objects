@@ -86,6 +86,7 @@ namespace DataAccess
             using (var db = new DB_Context())
             {
                 db.Deals.Add(deal);
+                db.ObjectOfTransactions.Find(deal.ObjectOfTransactionID).ObjectStateID = 2;
                 db.SaveChanges();
             }
         }
@@ -115,6 +116,7 @@ namespace DataAccess
             using (var db = new DB_Context())
             {
                 db.Deals.Remove(deal);
+                db.ObjectOfTransactions.Find(deal.ObjectOfTransactionID).ObjectStateID = 1;
                 db.SaveChanges();
             }
         }
@@ -153,6 +155,7 @@ namespace DataAccess
                 d.KindOfCalculatingID = deal.KindOfCalculatingID;
                 d.ObjectOfTransactionID = deal.ObjectOfTransactionID;
 
+                db.ObjectOfTransactions.Find(deal.ObjectOfTransactionID).ObjectStateID = 2;
                 db.SaveChanges();
 
             }
@@ -188,6 +191,23 @@ namespace DataAccess
             }
         }
 
-
+        /// <summary>
+        /// View hendler methods
+        /// </summary>
+        /// <returns></returns>
+        public static List<int> GetUsersId()
+        {
+            using (var db = new DB_Context())
+            {
+                return db.Users.Select(x => x.UserID).ToList();
+            }
+        }
+        public static List<int> GetObjOfTransactId()
+        {
+            using (var db = new DB_Context())
+            {
+                return db.ObjectOfTransactions.Select(x => x.ObjectOfTransactionID).ToList();
+            }
+        }
     }
 }

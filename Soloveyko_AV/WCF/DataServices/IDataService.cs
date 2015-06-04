@@ -47,5 +47,10 @@ namespace WCF.DataServices
         void UpdateUser(User user);
         [OperationContract]
         void UpdateObjectOfTransaction(ObjectOfTransaction objectOfTransaction);
+
+        [OperationContract]
+        List<int> GetUsersId();
+        [OperationContract]
+        List<int> GetObjOfTransactId();
     }
 }

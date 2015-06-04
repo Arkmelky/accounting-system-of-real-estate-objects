@@ -81,5 +81,14 @@ namespace WCF.DataServices
         {
             DataManager.UpdateObjectOfTransactionFromDb(objectOfTransaction);
         }
+
+        public List<int> GetUsersId()
+        {
+            return DataManager.GetUsersId();
+        }
+        public List<int> GetObjOfTransactId()
+        {
+            return DataManager.GetObjOfTransactId();
+        }
     }
 }

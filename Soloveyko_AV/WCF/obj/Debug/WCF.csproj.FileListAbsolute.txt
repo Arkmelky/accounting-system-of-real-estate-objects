@@ -20,3 +20,5 @@ G:\OOP\Курсовой_6сем\Soloveyko_AV\WCF\bin\EntityFramework.xml
 G:\OOP\Курсовой_6сем\Soloveyko_AV\WCF\obj\Debug\WCF.csprojResolveAssemblyReference.cache
 G:\OOP\Курсовой_6сем\Soloveyko_AV\WCF\obj\Debug\WCF.dll
 G:\OOP\Курсовой_6сем\Soloveyko_AV\WCF\obj\Debug\WCF.pdb
+G:\OOP\Курсовой_6сем\Soloveyko_AV\WCF\bin\WCF.dll.CodeAnalysisLog.xml
+G:\OOP\Курсовой_6сем\Soloveyko_AV\WCF\bin\WCF.dll.lastcodeanalysissucceeded

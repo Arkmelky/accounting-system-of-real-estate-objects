@@ -172,6 +172,9 @@
     <None Include="Service References\DataAccessService\DataService31.xsd">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Service References\DataAccessService\DataService4.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Service References\DataAccessService\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>

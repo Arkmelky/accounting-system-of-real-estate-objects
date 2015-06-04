@@ -26,3 +26,5 @@ G:\OOP\Курсовой_6сем\Soloveyko_AV\DataAccess\obj\Debug\DataAccess.Mig
 G:\OOP\Курсовой_6сем\Soloveyko_AV\DataAccess\obj\Debug\DataAccess.csproj.GenerateResource.Cache
 G:\OOP\Курсовой_6сем\Soloveyko_AV\DataAccess\obj\Debug\DataAccess.dll
 G:\OOP\Курсовой_6сем\Soloveyko_AV\DataAccess\obj\Debug\DataAccess.pdb
+G:\OOP\Курсовой_6сем\Soloveyko_AV\DataAccess\bin\Debug\DataAccess.dll.CodeAnalysisLog.xml
+G:\OOP\Курсовой_6сем\Soloveyko_AV\DataAccess\bin\Debug\DataAccess.dll.lastcodeanalysissucceeded

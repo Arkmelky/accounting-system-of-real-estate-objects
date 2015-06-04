@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace Entities.SupportEntities
 {
+    
     public enum EnumObjectType
     {
         House = 1,

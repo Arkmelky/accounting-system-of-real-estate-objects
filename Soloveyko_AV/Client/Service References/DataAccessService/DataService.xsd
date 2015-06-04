@@ -2,6 +2,7 @@
 <xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:import schemaLocation="http://localhost:31406/DataServices/DataService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Entities.ViewModels" />
   <xs:import schemaLocation="http://localhost:31406/DataServices/DataService.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/Entities.DbModels" />
+  <xs:import schemaLocation="http://localhost:31406/DataServices/DataService.svc?xsd=xsd5" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
   <xs:element name="GetDeals">
     <xs:complexType>
       <xs:sequence />
@@ -83,7 +84,7 @@
   <xs:element name="AddDeal">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/Entities.DbModels" minOccurs="0" name="deal" nillable="true" type="q7:Deal" />
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/Entities.ViewModels" minOccurs="0" name="deal" nillable="true" type="q7:ViewDeal" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -95,7 +96,7 @@
   <xs:element name="AddUser">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/Entities.DbModels" minOccurs="0" name="user" nillable="true" type="q8:User" />
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/Entities.ViewModels" minOccurs="0" name="user" nillable="true" type="q8:ViewUser" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -107,7 +108,7 @@
   <xs:element name="AddObjectOfTransaction">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/Entities.DbModels" minOccurs="0" name="objectOfTransaction" nillable="true" type="q9:ObjectOfTransaction" />
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/Entities.ViewModels" minOccurs="0" name="objectOfTransaction" nillable="true" type="q9:ViewObjOfTransact" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -186,6 +187,30 @@
   <xs:element name="UpdateObjectOfTransactionResponse">
     <xs:complexType>
       <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUsersId">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUsersIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q16="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="GetUsersIdResult" nillable="true" type="q16:ArrayOfint" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetObjOfTransactId">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetObjOfTransactIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q17="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="GetObjOfTransactIdResult" nillable="true" type="q17:ArrayOfint" />
+      </xs:sequence>
     </xs:complexType>
   </xs:element>
 </xs:schema>
