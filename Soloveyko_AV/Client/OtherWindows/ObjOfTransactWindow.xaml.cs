@@ -47,6 +47,9 @@ namespace Client.OtherWindows
             ComboBox_ObjectState.ItemsSource = Enum.GetValues(typeof(EnumObjectState));
             ComboBox_ObjectState.SelectedIndex = 0;
 
+            TextBox_Cost.Text = objOfTransact.Cost.ToString();
+            TextBox_Description.Text = objOfTransact.Description;
+
             if (obj.ObjectOfTransactionID > 0)
             {
                 Button_Correct.IsEnabled = true;
@@ -61,11 +64,16 @@ namespace Client.OtherWindows
 
         private void Button_Correct_Click(object sender, RoutedEventArgs e)
         {
-            if (SaveObject())
+            PrepareObject();
+            try
             {
+                using (var data = new DataServiceClient())
+                {
+                    data.UpdateObjectOfTransaction(objOfTransact);
+                }
                 MessageBox.Show("Transaction successful !");
             }
-            else
+            catch (Exception)
             {
                 MessageBox.Show("Error !");
             }
@@ -74,11 +82,16 @@ namespace Client.OtherWindows
 
         private void Button_Add_Click(object sender, RoutedEventArgs e)
         {
-            if (SaveObject())
+            PrepareObject();
+            try
             {
+                using (var data = new DataServiceClient())
+                {
+                    data.AddObjectOfTransaction(objOfTransact);
+                }
                 MessageBox.Show("Transaction successful !");
             }
-            else
+            catch (Exception)
             {
                 MessageBox.Show("Error !");
             }
@@ -101,34 +114,5 @@ namespace Client.OtherWindows
             objOfTransact.Cost = dec;
             objOfTransact.Description = TextBox_Description.Text;
         }
-
-        private bool SaveObject()
-        {
-            PrepareObject();
-            try
-            {
-                if (objOfTransact.ObjectOfTransactionID == 0)
-                {
-                    using (var data = new DataServiceClient())
-                    {
-                        data.AddObjectOfTransaction(objOfTransact);
-                    }
-                }
-                else
-                {
-                    using (var data = new DataServiceClient())
-                    {
-                        data.UpdateObjectOfTransaction(objOfTransact);
-                    }
-                }
-            }
-            catch (Exception)
-            {
-                return false;
-            }
-            return true;
-
-        }
-
     }
 }

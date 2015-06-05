@@ -52,34 +52,49 @@ namespace Client.OtherWindows
 
         private void Button_Add_Click(object sender, RoutedEventArgs e)
         {
-            viewUser.Name = TextBox_Name.Text;
-            viewUser.Surname=TextBox_Surname.Text;
-            viewUser.PhoneNumber = TextBox_PhoneNumber.Text;
-            viewUser.Email = TextBox_Email.Text;
-
-            using (var data = new DataServiceClient())
+            PreapareObject();
+            try
             {
-                data.AddUser(viewUser);
+                using (var data = new DataServiceClient())
+                {
+                    data.AddUser(viewUser);
+                }
+                MessageBox.Show("Transaction successful !");
             }
-
+            catch (Exception)
+            {
+                MessageBox.Show("Error !");
+            }
+            
             this.Close();
         }
 
         private void Button_Correct_Click(object sender, RoutedEventArgs e)
         {
+            PreapareObject();
+            try
+            {
+                using (var data = new DataServiceClient())
+                {
+                    data.UpdateUser(viewUser);
+                }
+                MessageBox.Show("Transaction successful !");
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Error !");
+            }
+            
+            this.Close();
+        }
+
+        private void PreapareObject()
+        {
             viewUser.Name = TextBox_Name.Text;
             viewUser.Surname = TextBox_Surname.Text;
             viewUser.PhoneNumber = TextBox_PhoneNumber.Text;
             viewUser.Email = TextBox_Email.Text;
-
-            using (var data = new DataServiceClient())
-            {
-                data.AddUser(viewUser);
-            }
-
-            this.Close();
         }
-        
 
     }
 }
