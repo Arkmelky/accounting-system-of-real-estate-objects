@@ -46,7 +46,8 @@ namespace Client
             }
             else if(TabItem_Deals.IsSelected)
             {
-                var dealWindow = new DealWindow();
+                var viewDeal = new ViewDeal();
+                var dealWindow = new DealWindow(viewDeal);
                 dealWindow.ShowDialog();
                 UpdateDeals();
             }

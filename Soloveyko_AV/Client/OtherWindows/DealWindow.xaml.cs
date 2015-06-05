@@ -50,6 +50,17 @@ namespace Client.OtherWindows
             
             TextBox_PersonalNumberOfDeal.Text = viewDeal.PersonalNumberOfDeal;
             TextBox_TransactionAmount.Text = viewDeal.TransactionAmount.ToString();
+
+            if (deal.DealID > 0)
+            {
+                Button_Correct.IsEnabled = true;
+                Button_Add.IsEnabled = false;
+            }
+            else
+            {
+                Button_Correct.IsEnabled = false;
+                Button_Add.IsEnabled = true;
+            }
         }
 
         private void Button_Add_Click(object sender, RoutedEventArgs e)
