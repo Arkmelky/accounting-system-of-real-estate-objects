@@ -1131,40 +1131,40 @@ namespace Client.DataAccessService {
         System.Threading.Tasks.Task AddObjectOfTransactionAsync(Client.DataAccessService.ViewObjOfTransact objectOfTransaction);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IDataService/DeleteDeal", ReplyAction="http://tempuri.org/IDataService/DeleteDealResponse")]
-        void DeleteDeal(Client.DataAccessService.Deal deal);
+        void DeleteDeal(Client.DataAccessService.ViewDeal deal);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IDataService/DeleteDeal", ReplyAction="http://tempuri.org/IDataService/DeleteDealResponse")]
-        System.Threading.Tasks.Task DeleteDealAsync(Client.DataAccessService.Deal deal);
+        System.Threading.Tasks.Task DeleteDealAsync(Client.DataAccessService.ViewDeal deal);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IDataService/DeleteUser", ReplyAction="http://tempuri.org/IDataService/DeleteUserResponse")]
-        void DeleteUser(Client.DataAccessService.User user);
+        void DeleteUser(Client.DataAccessService.ViewUser user);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IDataService/DeleteUser", ReplyAction="http://tempuri.org/IDataService/DeleteUserResponse")]
-        System.Threading.Tasks.Task DeleteUserAsync(Client.DataAccessService.User user);
+        System.Threading.Tasks.Task DeleteUserAsync(Client.DataAccessService.ViewUser user);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IDataService/DeleteObjectOfTransaction", ReplyAction="http://tempuri.org/IDataService/DeleteObjectOfTransactionResponse")]
-        void DeleteObjectOfTransaction(Client.DataAccessService.ObjectOfTransaction objectOfTransaction);
+        void DeleteObjectOfTransaction(Client.DataAccessService.ViewObjOfTransact objectOfTransaction);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IDataService/DeleteObjectOfTransaction", ReplyAction="http://tempuri.org/IDataService/DeleteObjectOfTransactionResponse")]
-        System.Threading.Tasks.Task DeleteObjectOfTransactionAsync(Client.DataAccessService.ObjectOfTransaction objectOfTransaction);
+        System.Threading.Tasks.Task DeleteObjectOfTransactionAsync(Client.DataAccessService.ViewObjOfTransact objectOfTransaction);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IDataService/UpdateDeal", ReplyAction="http://tempuri.org/IDataService/UpdateDealResponse")]
-        void UpdateDeal(Client.DataAccessService.Deal deal);
+        void UpdateDeal(Client.DataAccessService.ViewDeal deal);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IDataService/UpdateDeal", ReplyAction="http://tempuri.org/IDataService/UpdateDealResponse")]
-        System.Threading.Tasks.Task UpdateDealAsync(Client.DataAccessService.Deal deal);
+        System.Threading.Tasks.Task UpdateDealAsync(Client.DataAccessService.ViewDeal deal);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IDataService/UpdateUser", ReplyAction="http://tempuri.org/IDataService/UpdateUserResponse")]
-        void UpdateUser(Client.DataAccessService.User user);
+        void UpdateUser(Client.DataAccessService.ViewUser user);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IDataService/UpdateUser", ReplyAction="http://tempuri.org/IDataService/UpdateUserResponse")]
-        System.Threading.Tasks.Task UpdateUserAsync(Client.DataAccessService.User user);
+        System.Threading.Tasks.Task UpdateUserAsync(Client.DataAccessService.ViewUser user);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IDataService/UpdateObjectOfTransaction", ReplyAction="http://tempuri.org/IDataService/UpdateObjectOfTransactionResponse")]
-        void UpdateObjectOfTransaction(Client.DataAccessService.ObjectOfTransaction objectOfTransaction);
+        void UpdateObjectOfTransaction(Client.DataAccessService.ViewObjOfTransact objectOfTransaction);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IDataService/UpdateObjectOfTransaction", ReplyAction="http://tempuri.org/IDataService/UpdateObjectOfTransactionResponse")]
-        System.Threading.Tasks.Task UpdateObjectOfTransactionAsync(Client.DataAccessService.ObjectOfTransaction objectOfTransaction);
+        System.Threading.Tasks.Task UpdateObjectOfTransactionAsync(Client.DataAccessService.ViewObjOfTransact objectOfTransaction);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IDataService/GetUsersId", ReplyAction="http://tempuri.org/IDataService/GetUsersIdResponse")]
         int[] GetUsersId();
@@ -1278,51 +1278,51 @@ namespace Client.DataAccessService {
             return base.Channel.AddObjectOfTransactionAsync(objectOfTransaction);
         }
         
-        public void DeleteDeal(Client.DataAccessService.Deal deal) {
+        public void DeleteDeal(Client.DataAccessService.ViewDeal deal) {
             base.Channel.DeleteDeal(deal);
         }
         
-        public System.Threading.Tasks.Task DeleteDealAsync(Client.DataAccessService.Deal deal) {
+        public System.Threading.Tasks.Task DeleteDealAsync(Client.DataAccessService.ViewDeal deal) {
             return base.Channel.DeleteDealAsync(deal);
         }
         
-        public void DeleteUser(Client.DataAccessService.User user) {
+        public void DeleteUser(Client.DataAccessService.ViewUser user) {
             base.Channel.DeleteUser(user);
         }
         
-        public System.Threading.Tasks.Task DeleteUserAsync(Client.DataAccessService.User user) {
+        public System.Threading.Tasks.Task DeleteUserAsync(Client.DataAccessService.ViewUser user) {
             return base.Channel.DeleteUserAsync(user);
         }
         
-        public void DeleteObjectOfTransaction(Client.DataAccessService.ObjectOfTransaction objectOfTransaction) {
+        public void DeleteObjectOfTransaction(Client.DataAccessService.ViewObjOfTransact objectOfTransaction) {
             base.Channel.DeleteObjectOfTransaction(objectOfTransaction);
         }
         
-        public System.Threading.Tasks.Task DeleteObjectOfTransactionAsync(Client.DataAccessService.ObjectOfTransaction objectOfTransaction) {
+        public System.Threading.Tasks.Task DeleteObjectOfTransactionAsync(Client.DataAccessService.ViewObjOfTransact objectOfTransaction) {
             return base.Channel.DeleteObjectOfTransactionAsync(objectOfTransaction);
         }
         
-        public void UpdateDeal(Client.DataAccessService.Deal deal) {
+        public void UpdateDeal(Client.DataAccessService.ViewDeal deal) {
             base.Channel.UpdateDeal(deal);
         }
         
-        public System.Threading.Tasks.Task UpdateDealAsync(Client.DataAccessService.Deal deal) {
+        public System.Threading.Tasks.Task UpdateDealAsync(Client.DataAccessService.ViewDeal deal) {
             return base.Channel.UpdateDealAsync(deal);
         }
         
-        public void UpdateUser(Client.DataAccessService.User user) {
+        public void UpdateUser(Client.DataAccessService.ViewUser user) {
             base.Channel.UpdateUser(user);
         }
         
-        public System.Threading.Tasks.Task UpdateUserAsync(Client.DataAccessService.User user) {
+        public System.Threading.Tasks.Task UpdateUserAsync(Client.DataAccessService.ViewUser user) {
             return base.Channel.UpdateUserAsync(user);
         }
         
-        public void UpdateObjectOfTransaction(Client.DataAccessService.ObjectOfTransaction objectOfTransaction) {
+        public void UpdateObjectOfTransaction(Client.DataAccessService.ViewObjOfTransact objectOfTransaction) {
             base.Channel.UpdateObjectOfTransaction(objectOfTransaction);
         }
         
-        public System.Threading.Tasks.Task UpdateObjectOfTransactionAsync(Client.DataAccessService.ObjectOfTransaction objectOfTransaction) {
+        public System.Threading.Tasks.Task UpdateObjectOfTransactionAsync(Client.DataAccessService.ViewObjOfTransact objectOfTransaction) {
             return base.Channel.UpdateObjectOfTransactionAsync(objectOfTransaction);
         }
         

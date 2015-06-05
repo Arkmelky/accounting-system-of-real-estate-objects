@@ -56,30 +56,30 @@ namespace WCF.DataServices
             DataManager.AddObjectOfTransactionToDb(DbConverter.ConverObjOfTransaction(objectOfTransaction));
         }
 
-        public void DeleteDeal(Deal deal)
+        public void DeleteDeal(ViewDeal deal)
         {
-            DataManager.DeleteDealFromDb(deal);
+            DataManager.DeleteDealFromDb(DbConverter.ConvertDeal(deal));
         }
-        public void DeleteUser(User user)
+        public void DeleteUser(ViewUser user)
         {
-            DataManager.DeleteUserFromDb(user);
+            DataManager.DeleteUserFromDb(DbConverter.ConvertUser(user));
         }
-        public void DeleteObjectOfTransaction(ObjectOfTransaction objectOfTransaction)
+        public void DeleteObjectOfTransaction(ViewObjOfTransact objectOfTransaction)
         {
-            DataManager.DeleteObjectOfTransactionFromDb(objectOfTransaction);
+            DataManager.DeleteObjectOfTransactionFromDb(DbConverter.ConverObjOfTransaction(objectOfTransaction));
         }
 
-        public void UpdateDeal(Deal deal)
+        public void UpdateDeal(ViewDeal deal)
         {
-            DataManager.UpdateDealFromDb(deal);
+            DataManager.UpdateDealFromDb(DbConverter.ConvertDeal(deal));
         }
-        public void UpdateUser(User user)
+        public void UpdateUser(ViewUser user)
         {
-            DataManager.UpdateUserFromDb(user);
+            DataManager.UpdateUserFromDb(DbConverter.ConvertUser(user));
         }
-        public void UpdateObjectOfTransaction(ObjectOfTransaction objectOfTransaction)
+        public void UpdateObjectOfTransaction(ViewObjOfTransact objectOfTransaction)
         {
-            DataManager.UpdateObjectOfTransactionFromDb(objectOfTransaction);
+            DataManager.UpdateObjectOfTransactionFromDb(DbConverter.ConverObjOfTransaction(objectOfTransaction));
         }
 
         public List<int> GetUsersId()

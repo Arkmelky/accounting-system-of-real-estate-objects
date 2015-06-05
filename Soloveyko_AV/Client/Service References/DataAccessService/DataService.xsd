@@ -120,7 +120,7 @@
   <xs:element name="DeleteDeal">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/Entities.DbModels" minOccurs="0" name="deal" nillable="true" type="q10:Deal" />
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/Entities.ViewModels" minOccurs="0" name="deal" nillable="true" type="q10:ViewDeal" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -132,7 +132,7 @@
   <xs:element name="DeleteUser">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/Entities.DbModels" minOccurs="0" name="user" nillable="true" type="q11:User" />
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/Entities.ViewModels" minOccurs="0" name="user" nillable="true" type="q11:ViewUser" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -144,7 +144,7 @@
   <xs:element name="DeleteObjectOfTransaction">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/Entities.DbModels" minOccurs="0" name="objectOfTransaction" nillable="true" type="q12:ObjectOfTransaction" />
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/Entities.ViewModels" minOccurs="0" name="objectOfTransaction" nillable="true" type="q12:ViewObjOfTransact" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -156,7 +156,7 @@
   <xs:element name="UpdateDeal">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/Entities.DbModels" minOccurs="0" name="deal" nillable="true" type="q13:Deal" />
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/Entities.ViewModels" minOccurs="0" name="deal" nillable="true" type="q13:ViewDeal" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -168,7 +168,7 @@
   <xs:element name="UpdateUser">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/Entities.DbModels" minOccurs="0" name="user" nillable="true" type="q14:User" />
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/Entities.ViewModels" minOccurs="0" name="user" nillable="true" type="q14:ViewUser" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -180,7 +180,7 @@
   <xs:element name="UpdateObjectOfTransaction">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/Entities.DbModels" minOccurs="0" name="objectOfTransaction" nillable="true" type="q15:ObjectOfTransaction" />
+        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/Entities.ViewModels" minOccurs="0" name="objectOfTransaction" nillable="true" type="q15:ViewObjOfTransact" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>

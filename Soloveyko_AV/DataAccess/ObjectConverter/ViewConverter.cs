@@ -24,7 +24,7 @@ namespace Entities.ObjectConverter
 
                 PersonalNumberOfDeal = deal.PersonalNumberOfDeal,
                 SellerInfo = DataManager.GetuUserFromDbById(deal.Seller_UserID).ToString(),
-                BuyerInfo = DataManager.GetuUserFromDbById(deal.Seller_UserID).ToString(),
+                BuyerInfo = DataManager.GetuUserFromDbById(deal.Buyer_UserID).ToString(),
                 ObjectOfTransactionInfo = DataManager.GetObjectOfTransactionFromDbById(deal.ObjectOfTransactionID).ToString(),
 
                 KindOfCalculatingID = (EnumKindOfCalculating)deal.KindOfCalculatingID,

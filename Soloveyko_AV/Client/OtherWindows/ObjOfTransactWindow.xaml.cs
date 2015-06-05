@@ -61,7 +61,7 @@ namespace Client.OtherWindows
 
         private void Button_Correct_Click(object sender, RoutedEventArgs e)
         {
-            if (SaveData())
+            if (SaveObject())
             {
                 MessageBox.Show("Transaction successful !");
             }
@@ -74,7 +74,7 @@ namespace Client.OtherWindows
 
         private void Button_Add_Click(object sender, RoutedEventArgs e)
         {
-            if (SaveData())
+            if (SaveObject())
             {
                 MessageBox.Show("Transaction successful !");
             }
@@ -85,27 +85,41 @@ namespace Client.OtherWindows
             this.Close();
         }
 
-        private bool SaveData()
+        private void PrepareObject()
         {
+            int temp = 0;
+            decimal dec = 0;
+            int.TryParse(ComboBox_UserId.Text, out temp);
+            objOfTransact.UserID = temp;
+
+            objOfTransact.ObjectType = (EnumObjectType)Enum.Parse(typeof(EnumObjectType), ComboBox_ObjectType.Text);
+            objOfTransact.ServiceType = (EnumServiceType)Enum.Parse(typeof(EnumServiceType), ComboBox_ServiceType.Text);
+            objOfTransact.KindOfCalculating = (EnumKindOfCalculating)Enum.Parse(typeof(EnumKindOfCalculating), ComboBox_KindOfCalc.Text);
+            objOfTransact.ObjectState = (EnumObjectState)Enum.Parse(typeof(EnumObjectState), ComboBox_ObjectState.Text); ;
+
+            decimal.TryParse(TextBox_Cost.Text, out dec);
+            objOfTransact.Cost = dec;
+            objOfTransact.Description = TextBox_Description.Text;
+        }
+
+        private bool SaveObject()
+        {
+            PrepareObject();
             try
             {
-                int temp = 0;
-                decimal dec = 0;
-                int.TryParse(ComboBox_UserId.Text, out temp);
-                objOfTransact.UserID = temp;
-
-                objOfTransact.ObjectType = (EnumObjectType)Enum.Parse(typeof(EnumObjectType), ComboBox_ObjectType.Text);
-                objOfTransact.ServiceType = (EnumServiceType)Enum.Parse(typeof(EnumServiceType), ComboBox_ServiceType.Text);
-                objOfTransact.KindOfCalculating = (EnumKindOfCalculating)Enum.Parse(typeof(EnumKindOfCalculating), ComboBox_KindOfCalc.Text);
-                objOfTransact.ObjectState = (EnumObjectState)Enum.Parse(typeof(EnumObjectState), ComboBox_ObjectState.Text); ;
-
-                decimal.TryParse(TextBox_Cost.Text, out dec);
-                objOfTransact.Cost = dec;
-                objOfTransact.Description = TextBox_Description.Text;
-
-                using (var data = new DataServiceClient())
+                if (objOfTransact.ObjectOfTransactionID == 0)
                 {
-                    data.AddObjectOfTransaction(objOfTransact);
+                    using (var data = new DataServiceClient())
+                    {
+                        data.AddObjectOfTransaction(objOfTransact);
+                    }
+                }
+                else
+                {
+                    using (var data = new DataServiceClient())
+                    {
+                        data.UpdateObjectOfTransaction(objOfTransact);
+                    }
                 }
             }
             catch (Exception)

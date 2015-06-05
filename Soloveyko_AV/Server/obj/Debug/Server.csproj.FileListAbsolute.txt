@@ -30,5 +30,3 @@ G:\OOP\Курсовой_6сем\Soloveyko_AV\Server\bin\Debug\WCF.pdb
 G:\OOP\Курсовой_6сем\Soloveyko_AV\Server\bin\Debug\EntityFramework.xml
 G:\OOP\Курсовой_6сем\Soloveyko_AV\Server\bin\Debug\EntityFramework.SqlServer.xml
 G:\OOP\Курсовой_6сем\Soloveyko_AV\Server\obj\Debug\Server.csprojResolveAssemblyReference.cache
-G:\OOP\Курсовой_6сем\Soloveyko_AV\Server\bin\Debug\Server.exe.CodeAnalysisLog.xml
-G:\OOP\Курсовой_6сем\Soloveyko_AV\Server\bin\Debug\Server.exe.lastcodeanalysissucceeded

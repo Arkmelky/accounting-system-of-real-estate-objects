@@ -35,18 +35,18 @@ namespace WCF.DataServices
         void AddObjectOfTransaction(ViewObjOfTransact objectOfTransaction);
 
         [OperationContract]
-        void DeleteDeal(Deal deal);
+        void DeleteDeal(ViewDeal deal);
         [OperationContract]
-        void DeleteUser(User user);
+        void DeleteUser(ViewUser user);
         [OperationContract]
-        void DeleteObjectOfTransaction(ObjectOfTransaction objectOfTransaction);
+        void DeleteObjectOfTransaction(ViewObjOfTransact objectOfTransaction);
 
         [OperationContract]
-        void UpdateDeal(Deal deal);
+        void UpdateDeal(ViewDeal deal);
         [OperationContract]
-        void UpdateUser(User user);
+        void UpdateUser(ViewUser user);
         [OperationContract]
-        void UpdateObjectOfTransaction(ObjectOfTransaction objectOfTransaction);
+        void UpdateObjectOfTransaction(ViewObjOfTransact objectOfTransaction);
 
         [OperationContract]
         List<int> GetUsersId();
