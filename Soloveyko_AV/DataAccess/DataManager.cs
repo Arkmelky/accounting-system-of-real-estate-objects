@@ -83,12 +83,20 @@ namespace DataAccess
         /// <param name="deal"></param>
         public static void AddDealToDb(Deal deal)
         {
-            using (var db = new DB_Context())
+            try
             {
-                db.Deals.Add(deal);
-                db.ObjectOfTransactions.Find(deal.ObjectOfTransactionID).ObjectStateID = 2;
-                db.SaveChanges();
+                using (var db = new DB_Context())
+                {
+                    db.Deals.Add(deal);
+                    db.ObjectOfTransactions.Find(deal.ObjectOfTransactionID).ObjectStateID = 2;
+                    db.SaveChanges();
+                }
             }
+            catch (Exception EX)
+            {
+                
+            }
+            
         }
         public static void AddUserToDb(User user)
         {

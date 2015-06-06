@@ -37,19 +37,16 @@ namespace Client.OtherWindows
             {
                 ComboBox_Seller.ItemsSource = data.GetUsersId();
                 ComboBox_Buyer.ItemsSource = ComboBox_Seller.ItemsSource;
-                ComboBox_ObjOfTransact.ItemsSource = data.GetObjOfTransactId();
             }
-            ComboBox_Seller.Text = viewDeal.Seller_UserID.ToString();
-            ComboBox_Buyer.Text = viewDeal.Buyer_UserID.ToString();
-            ComboBox_ObjOfTransact.Text = viewDeal.ObjectOfTransactionID.ToString();
 
-            ComboBox_KindOfCalc.ItemsSource = Enum.GetValues(typeof (EnumKindOfCalculating));
-            ComboBox_KindOfCalc.Text = Enum.GetName(typeof(EnumKindOfCalculating),viewDeal.KindOfCalculatingID);
-            
-            TextBox_DateOfDeal.Text = viewDeal.DateOfDeal.ToString();
-            
-            TextBox_PersonalNumberOfDeal.Text = viewDeal.PersonalNumberOfDeal;
-            TextBox_TransactionAmount.Text = viewDeal.TransactionAmount.ToString();
+            ComboBox_Buyer.IsEnabled = false;
+            ComboBox_ObjOfTransact.IsEnabled = false;
+            ComboBox_KindOfCalc.IsEnabled = false;
+            TextBox_PersonalNumberOfDeal.IsEnabled = false;
+            TextBox_DateOfDeal.IsEnabled = false;
+            TextBox_TransactionAmount.IsEnabled = false;
+
+            SetInfo();
 
             if (deal.DealID > 0)
             {
@@ -74,7 +71,7 @@ namespace Client.OtherWindows
                 }
                 MessageBox.Show("Transaction successful !");
             }
-            catch (Exception)
+            catch (Exception ex)
             {
                 MessageBox.Show("Error !");
             }
@@ -97,11 +94,32 @@ namespace Client.OtherWindows
             }
         }
 
+        
+
+        private void ComboBox_Seller_LostFocus(object sender, RoutedEventArgs e)
+        {
+            if (ComboBox_Seller.Text != "")
+            {
+                ActivateTools();
+
+                int id;
+                int.TryParse(ComboBox_Seller.Text,out id);
+                ComboBox_ObjOfTransact.ItemsSource = null;
+
+                using (var data = new DataServiceClient())
+                {
+                    var temp = data.GetObjectOfTransactions();
+                    var source = temp.Where(x => x.UserID == id).Select(x => x.ObjectOfTransactionID);
+                    ComboBox_ObjOfTransact.ItemsSource = source;
+                }
+            }
+        }
+
         private void PrepareObject()
         {
             int id;
             decimal dec;
-            int.TryParse(ComboBox_Seller.Text,out id);
+            int.TryParse(ComboBox_Seller.Text, out id);
             viewDeal.Seller_UserID = id;
             int.TryParse(ComboBox_Buyer.Text, out id);
             viewDeal.Buyer_UserID = id;
@@ -115,5 +133,37 @@ namespace Client.OtherWindows
             decimal.TryParse(TextBox_TransactionAmount.Text, out dec);
             viewDeal.TransactionAmount = dec;
         }
+
+        private void ActivateTools()
+        {
+            ComboBox_Buyer.IsEnabled = true;
+            ComboBox_ObjOfTransact.IsEnabled = true;
+            ComboBox_KindOfCalc.IsEnabled = true;
+            TextBox_PersonalNumberOfDeal.IsEnabled = true;
+            TextBox_DateOfDeal.IsEnabled = true;
+            TextBox_TransactionAmount.IsEnabled = true;
+        }
+
+        private void SetInfo()
+        {
+            ComboBox_Seller.Text = viewDeal.Seller_UserID.ToString();
+            ComboBox_Buyer.Text = viewDeal.Buyer_UserID.ToString();
+            ComboBox_ObjOfTransact.Text = viewDeal.ObjectOfTransactionID.ToString();
+
+            ComboBox_KindOfCalc.ItemsSource = Enum.GetValues(typeof(EnumKindOfCalculating));
+            ComboBox_KindOfCalc.Text = Enum.GetName(typeof(EnumKindOfCalculating), viewDeal.KindOfCalculatingID);
+
+            TextBox_DateOfDeal.Text = DateTime.Now.ToString();
+
+            TextBox_PersonalNumberOfDeal.Text = viewDeal.PersonalNumberOfDeal;
+            TextBox_TransactionAmount.Text = viewDeal.TransactionAmount.ToString();
+        }
     }
 }
+
+/*
+ 
+            
+ 
+ 
+ */
