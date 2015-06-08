@@ -1,7 +1,16 @@
 ﻿<Window x:Class="Client.OtherWindows.ObjOfTransactWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="ObjOfTransactWindow" Height="385" Width="292">
+        Title="ObjOfTransactWindow" Height="385" Width="292" WindowStartupLocation="CenterScreen">
+    <Window.Background>
+        <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+            <GradientStop Color="#FF060100" Offset="1"/>
+            <GradientStop Color="#FFFD7DDA"/>
+            <GradientStop Color="#FF99190C" Offset="0.924"/>
+            <GradientStop Color="#FF7474FF" Offset="0.681"/>
+            <GradientStop Color="#FFB9FF00" Offset="0.402"/>
+        </LinearGradientBrush>
+    </Window.Background>
     <Grid Margin="0,0,2,0">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="13*"/>
@@ -9,21 +18,21 @@
             <ColumnDefinition Width="150*"/>
         </Grid.ColumnDefinitions>
         <ComboBox Name="ComboBox_UserId" HorizontalAlignment="Left" Margin="10,26,0,0" VerticalAlignment="Top" Width="120" Grid.Column="2" Height="22"/>
-        <Label Content="UserID" HorizontalAlignment="Left" Margin="10,26,0,0" VerticalAlignment="Top" Grid.Column="1" Height="26" Width="45"/>
+        <Label Content="UserID" HorizontalAlignment="Left" Margin="10,26,0,0" VerticalAlignment="Top" Grid.Column="1" Height="26" Width="57" FontSize="18" FontFamily="Freestyle Script"/>
         <ComboBox Name="ComboBox_ObjectType" HorizontalAlignment="Left" Margin="10,57,0,0" VerticalAlignment="Top" Width="120" Grid.Column="2" Height="22"/>
-        <Label Content="ObjectType" HorizontalAlignment="Left" Margin="10,57,0,0" VerticalAlignment="Top" Grid.Column="1" Height="26" Width="88"/>
+        <Label Content="ObjectType" HorizontalAlignment="Left" Margin="10,57,0,0" VerticalAlignment="Top" Grid.Column="1" Height="26" Width="88" FontSize="18" FontFamily="Freestyle Script"/>
         <ComboBox Name="ComboBox_ServiceType" HorizontalAlignment="Left" Margin="10,88,0,0" VerticalAlignment="Top" Width="120" Grid.Column="2" Height="22"/>
-        <Label Content="ServiceType" HorizontalAlignment="Left" Margin="10,88,0,0" VerticalAlignment="Top" Grid.Column="1" Height="26" Width="88"/>
+        <Label Content="ServiceType" HorizontalAlignment="Left" Margin="10,88,0,0" VerticalAlignment="Top" Grid.Column="1" Height="26" Width="88" FontSize="18" FontFamily="Freestyle Script"/>
         <ComboBox Name="ComboBox_KindOfCalc" HorizontalAlignment="Left" Margin="10,119,0,0" VerticalAlignment="Top" Width="120" Grid.Column="2" Height="22"/>
-        <Label Content="KindOfCalc" HorizontalAlignment="Left" Margin="10,119,0,0" VerticalAlignment="Top" Grid.Column="1" Height="26" Width="88"/>
+        <Label Content="KindOfCalc" HorizontalAlignment="Left" Margin="10,119,0,0" VerticalAlignment="Top" Grid.Column="1" Height="26" Width="88" FontSize="18" FontFamily="Freestyle Script"/>
         <ComboBox Name="ComboBox_ObjectState" HorizontalAlignment="Left" Margin="10,150,0,0" VerticalAlignment="Top" Width="120" Grid.Column="2" Height="22"/>
-        <Label Content="ObjectState" HorizontalAlignment="Left" Margin="10,150,0,0" VerticalAlignment="Top" Grid.Column="1" Height="26" Width="88"/>
-        <Label Content="Cost" HorizontalAlignment="Left" Margin="10,181,0,0" VerticalAlignment="Top" Grid.Column="1" Height="26" Width="88"/>
+        <Label Content="ObjectState" HorizontalAlignment="Left" Margin="10,150,0,0" VerticalAlignment="Top" Grid.Column="1" Height="26" Width="88" FontSize="18" FontFamily="Freestyle Script"/>
+        <Label Content="Cost" HorizontalAlignment="Left" Margin="10,181,0,0" VerticalAlignment="Top" Grid.Column="1" Height="26" Width="88" FontSize="18" FontFamily="Freestyle Script"/>
         <TextBox Name="TextBox_Cost" Grid.Column="2" HorizontalAlignment="Left" Height="23" Margin="10,184,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
-        <Label Content="Description" HorizontalAlignment="Left" Margin="10,212,0,0" VerticalAlignment="Top" Grid.Column="1" Height="26" Width="88"/>
+        <Label Content="Description" HorizontalAlignment="Left" Margin="10,212,0,0" VerticalAlignment="Top" Grid.Column="1" Height="26" Width="88" FontSize="18" FontFamily="Freestyle Script"/>
         <TextBox Name="TextBox_Description" Grid.Column="2" HorizontalAlignment="Left" Height="71" Margin="10,215,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
-        <Button Name="Button_Add" Content="Add" Grid.Column="2" HorizontalAlignment="Left" Margin="55,319,0,0" VerticalAlignment="Top" Width="75" Height="22" Click="Button_Add_Click"/>
-        <Button Name="Button_Correct" Content="Correct" Grid.Column="1" HorizontalAlignment="Left" Margin="94,319,0,0" VerticalAlignment="Top" Width="75" Height="22" Grid.ColumnSpan="2" Click="Button_Correct_Click"/>
+        <Button Name="Button_Add" Content="Add" Grid.Column="2" HorizontalAlignment="Left" Margin="55,319,0,0" VerticalAlignment="Top" Width="75" Height="22" Click="Button_Add_Click" Background="#FF39BF1B"/>
+        <Button Name="Button_Correct" Content="Correct" Grid.Column="1" HorizontalAlignment="Left" Margin="94,319,0,0" VerticalAlignment="Top" Width="75" Height="22" Grid.ColumnSpan="2" Click="Button_Correct_Click" Background="#FFEC9F18"/>
 
     </Grid>
 </Window>

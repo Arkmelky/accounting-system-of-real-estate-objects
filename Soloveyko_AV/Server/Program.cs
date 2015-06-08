@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using DataAccess;
 using Entities.DbModels;
 using Entities.SupportEntities;
+using Entities.ViewModels;
 using WCF.DataServices;
 
 namespace Server

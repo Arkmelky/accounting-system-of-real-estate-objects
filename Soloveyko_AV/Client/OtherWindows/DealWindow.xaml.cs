@@ -12,6 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using Client.DataAccessService;
+using Entities.SupportEntities;
+using Entities.ViewModels;
 
 namespace Client.OtherWindows
 {
@@ -75,6 +77,7 @@ namespace Client.OtherWindows
             {
                 MessageBox.Show("Error !");
             }
+            this.Close();
         }
 
         private void Button_Correct_Click(object sender, RoutedEventArgs e)
@@ -92,6 +95,7 @@ namespace Client.OtherWindows
             {
                 MessageBox.Show("Error !");
             }
+            this.Close();
         }
 
         

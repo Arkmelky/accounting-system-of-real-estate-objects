@@ -123,7 +123,7 @@ namespace DataAccess
         {
             using (var db = new DB_Context())
             {
-                db.Deals.Remove(deal);
+                db.Deals.Remove(db.Deals.Find(deal.DealID));
                 db.ObjectOfTransactions.Find(deal.ObjectOfTransactionID).ObjectStateID = 1;
                 db.SaveChanges();
             }
@@ -132,7 +132,7 @@ namespace DataAccess
         {
             using (var db = new DB_Context())
             {
-                db.Users.Remove(user);
+                db.Users.Remove(db.Users.Find(user.UserID));
                 db.SaveChanges();
             }
         }
@@ -140,7 +140,7 @@ namespace DataAccess
         {
             using (var db = new DB_Context())
             {
-                db.ObjectOfTransactions.Remove(objectOfTransaction);
+                db.ObjectOfTransactions.Remove(db.ObjectOfTransactions.Find(objectOfTransaction.ObjectOfTransactionID));
                 db.SaveChanges();
             }
         }

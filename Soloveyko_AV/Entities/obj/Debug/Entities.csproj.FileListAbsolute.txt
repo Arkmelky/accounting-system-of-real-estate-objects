@@ -16,5 +16,3 @@ G:\OOP\Курсовой_6сем\Soloveyko_AV\Entities\bin\Debug\EntityFramework.
 G:\OOP\Курсовой_6сем\Soloveyko_AV\Entities\bin\Debug\EntityFramework.SqlServer.xml
 G:\OOP\Курсовой_6сем\Soloveyko_AV\Entities\obj\Debug\Entities.dll
 G:\OOP\Курсовой_6сем\Soloveyko_AV\Entities\obj\Debug\Entities.pdb
-G:\OOP\Курсовой_6сем\Soloveyko_AV\Entities\bin\Debug\Entities.dll.CodeAnalysisLog.xml
-G:\OOP\Курсовой_6сем\Soloveyko_AV\Entities\bin\Debug\Entities.dll.lastcodeanalysissucceeded

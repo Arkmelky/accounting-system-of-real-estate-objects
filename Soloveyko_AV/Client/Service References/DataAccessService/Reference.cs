@@ -9,1162 +9,101 @@
 //------------------------------------------------------------------------------
 
 namespace Client.DataAccessService {
-    using System.Runtime.Serialization;
-    using System;
     
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="ViewDeal", Namespace="http://schemas.datacontract.org/2004/07/Entities.ViewModels")]
-    [System.SerializableAttribute()]
-    public partial class ViewDeal : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string BuyerInfoField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int Buyer_UserIDField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.DateTime DateOfDealField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int DealIDField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private Client.DataAccessService.EnumKindOfCalculating KindOfCalculatingIDField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int ObjectOfTransactionIDField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string ObjectOfTransactionInfoField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string PersonalNumberOfDealField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string SellerInfoField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int Seller_UserIDField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private decimal TransactionAmountField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string BuyerInfo {
-            get {
-                return this.BuyerInfoField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.BuyerInfoField, value) != true)) {
-                    this.BuyerInfoField = value;
-                    this.RaisePropertyChanged("BuyerInfo");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int Buyer_UserID {
-            get {
-                return this.Buyer_UserIDField;
-            }
-            set {
-                if ((this.Buyer_UserIDField.Equals(value) != true)) {
-                    this.Buyer_UserIDField = value;
-                    this.RaisePropertyChanged("Buyer_UserID");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.DateTime DateOfDeal {
-            get {
-                return this.DateOfDealField;
-            }
-            set {
-                if ((this.DateOfDealField.Equals(value) != true)) {
-                    this.DateOfDealField = value;
-                    this.RaisePropertyChanged("DateOfDeal");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int DealID {
-            get {
-                return this.DealIDField;
-            }
-            set {
-                if ((this.DealIDField.Equals(value) != true)) {
-                    this.DealIDField = value;
-                    this.RaisePropertyChanged("DealID");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public Client.DataAccessService.EnumKindOfCalculating KindOfCalculatingID {
-            get {
-                return this.KindOfCalculatingIDField;
-            }
-            set {
-                if ((this.KindOfCalculatingIDField.Equals(value) != true)) {
-                    this.KindOfCalculatingIDField = value;
-                    this.RaisePropertyChanged("KindOfCalculatingID");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int ObjectOfTransactionID {
-            get {
-                return this.ObjectOfTransactionIDField;
-            }
-            set {
-                if ((this.ObjectOfTransactionIDField.Equals(value) != true)) {
-                    this.ObjectOfTransactionIDField = value;
-                    this.RaisePropertyChanged("ObjectOfTransactionID");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string ObjectOfTransactionInfo {
-            get {
-                return this.ObjectOfTransactionInfoField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.ObjectOfTransactionInfoField, value) != true)) {
-                    this.ObjectOfTransactionInfoField = value;
-                    this.RaisePropertyChanged("ObjectOfTransactionInfo");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string PersonalNumberOfDeal {
-            get {
-                return this.PersonalNumberOfDealField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.PersonalNumberOfDealField, value) != true)) {
-                    this.PersonalNumberOfDealField = value;
-                    this.RaisePropertyChanged("PersonalNumberOfDeal");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string SellerInfo {
-            get {
-                return this.SellerInfoField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.SellerInfoField, value) != true)) {
-                    this.SellerInfoField = value;
-                    this.RaisePropertyChanged("SellerInfo");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int Seller_UserID {
-            get {
-                return this.Seller_UserIDField;
-            }
-            set {
-                if ((this.Seller_UserIDField.Equals(value) != true)) {
-                    this.Seller_UserIDField = value;
-                    this.RaisePropertyChanged("Seller_UserID");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public decimal TransactionAmount {
-            get {
-                return this.TransactionAmountField;
-            }
-            set {
-                if ((this.TransactionAmountField.Equals(value) != true)) {
-                    this.TransactionAmountField = value;
-                    this.RaisePropertyChanged("TransactionAmount");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="EnumKindOfCalculating", Namespace="http://schemas.datacontract.org/2004/07/Entities.SupportEntities")]
-    public enum EnumKindOfCalculating : int {
-        
-        [System.Runtime.Serialization.EnumMemberAttribute()]
-        Cahs = 1,
-        
-        [System.Runtime.Serialization.EnumMemberAttribute()]
-        BankTransfer = 2,
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="ViewUser", Namespace="http://schemas.datacontract.org/2004/07/Entities.ViewModels")]
-    [System.SerializableAttribute()]
-    public partial class ViewUser : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string EmailField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string NameField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string PhoneNumberField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string SurnameField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int UserIDField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Email {
-            get {
-                return this.EmailField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.EmailField, value) != true)) {
-                    this.EmailField = value;
-                    this.RaisePropertyChanged("Email");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Name {
-            get {
-                return this.NameField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.NameField, value) != true)) {
-                    this.NameField = value;
-                    this.RaisePropertyChanged("Name");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string PhoneNumber {
-            get {
-                return this.PhoneNumberField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.PhoneNumberField, value) != true)) {
-                    this.PhoneNumberField = value;
-                    this.RaisePropertyChanged("PhoneNumber");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Surname {
-            get {
-                return this.SurnameField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.SurnameField, value) != true)) {
-                    this.SurnameField = value;
-                    this.RaisePropertyChanged("Surname");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int UserID {
-            get {
-                return this.UserIDField;
-            }
-            set {
-                if ((this.UserIDField.Equals(value) != true)) {
-                    this.UserIDField = value;
-                    this.RaisePropertyChanged("UserID");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="ViewObjOfTransact", Namespace="http://schemas.datacontract.org/2004/07/Entities.ViewModels")]
-    [System.SerializableAttribute()]
-    public partial class ViewObjOfTransact : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private decimal CostField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string DescriptionField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private Client.DataAccessService.EnumKindOfCalculating KindOfCalculatingField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int ObjectOfTransactionIDField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private Client.DataAccessService.EnumObjectState ObjectStateField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private Client.DataAccessService.EnumObjectType ObjectTypeField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private Client.DataAccessService.EnumServiceType ServiceTypeField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int UserIDField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string UserInfoField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public decimal Cost {
-            get {
-                return this.CostField;
-            }
-            set {
-                if ((this.CostField.Equals(value) != true)) {
-                    this.CostField = value;
-                    this.RaisePropertyChanged("Cost");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Description {
-            get {
-                return this.DescriptionField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.DescriptionField, value) != true)) {
-                    this.DescriptionField = value;
-                    this.RaisePropertyChanged("Description");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public Client.DataAccessService.EnumKindOfCalculating KindOfCalculating {
-            get {
-                return this.KindOfCalculatingField;
-            }
-            set {
-                if ((this.KindOfCalculatingField.Equals(value) != true)) {
-                    this.KindOfCalculatingField = value;
-                    this.RaisePropertyChanged("KindOfCalculating");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int ObjectOfTransactionID {
-            get {
-                return this.ObjectOfTransactionIDField;
-            }
-            set {
-                if ((this.ObjectOfTransactionIDField.Equals(value) != true)) {
-                    this.ObjectOfTransactionIDField = value;
-                    this.RaisePropertyChanged("ObjectOfTransactionID");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public Client.DataAccessService.EnumObjectState ObjectState {
-            get {
-                return this.ObjectStateField;
-            }
-            set {
-                if ((this.ObjectStateField.Equals(value) != true)) {
-                    this.ObjectStateField = value;
-                    this.RaisePropertyChanged("ObjectState");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public Client.DataAccessService.EnumObjectType ObjectType {
-            get {
-                return this.ObjectTypeField;
-            }
-            set {
-                if ((this.ObjectTypeField.Equals(value) != true)) {
-                    this.ObjectTypeField = value;
-                    this.RaisePropertyChanged("ObjectType");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public Client.DataAccessService.EnumServiceType ServiceType {
-            get {
-                return this.ServiceTypeField;
-            }
-            set {
-                if ((this.ServiceTypeField.Equals(value) != true)) {
-                    this.ServiceTypeField = value;
-                    this.RaisePropertyChanged("ServiceType");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int UserID {
-            get {
-                return this.UserIDField;
-            }
-            set {
-                if ((this.UserIDField.Equals(value) != true)) {
-                    this.UserIDField = value;
-                    this.RaisePropertyChanged("UserID");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string UserInfo {
-            get {
-                return this.UserInfoField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.UserInfoField, value) != true)) {
-                    this.UserInfoField = value;
-                    this.RaisePropertyChanged("UserInfo");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="EnumObjectState", Namespace="http://schemas.datacontract.org/2004/07/Entities.SupportEntities")]
-    public enum EnumObjectState : int {
-        
-        [System.Runtime.Serialization.EnumMemberAttribute()]
-        Opened = 1,
-        
-        [System.Runtime.Serialization.EnumMemberAttribute()]
-        Closed = 2,
-    }
-    
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="EnumObjectType", Namespace="http://schemas.datacontract.org/2004/07/Entities.SupportEntities")]
-    public enum EnumObjectType : int {
-        
-        [System.Runtime.Serialization.EnumMemberAttribute()]
-        House = 1,
-        
-        [System.Runtime.Serialization.EnumMemberAttribute()]
-        Apartment = 2,
-        
-        [System.Runtime.Serialization.EnumMemberAttribute()]
-        Homestead = 3,
-        
-        [System.Runtime.Serialization.EnumMemberAttribute()]
-        CommercialProperty = 4,
-    }
-    
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="EnumServiceType", Namespace="http://schemas.datacontract.org/2004/07/Entities.SupportEntities")]
-    public enum EnumServiceType : int {
-        
-        [System.Runtime.Serialization.EnumMemberAttribute()]
-        Sale = 1,
-        
-        [System.Runtime.Serialization.EnumMemberAttribute()]
-        Rent = 2,
-        
-        [System.Runtime.Serialization.EnumMemberAttribute()]
-        Barter = 3,
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Deal", Namespace="http://schemas.datacontract.org/2004/07/Entities.DbModels")]
-    [System.SerializableAttribute()]
-    public partial class Deal : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private Client.DataAccessService.User BuyerField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int Buyer_UserIDField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.DateTime DateOfDealField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int DealIDField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int KindOfCalculatingIDField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private Client.DataAccessService.ObjectOfTransaction ObjectOfTransactionField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int ObjectOfTransactionIDField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string PersonalNumberOfDealField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private Client.DataAccessService.User SellerField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int Seller_UserIDField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private decimal TransactionAmountField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public Client.DataAccessService.User Buyer {
-            get {
-                return this.BuyerField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.BuyerField, value) != true)) {
-                    this.BuyerField = value;
-                    this.RaisePropertyChanged("Buyer");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int Buyer_UserID {
-            get {
-                return this.Buyer_UserIDField;
-            }
-            set {
-                if ((this.Buyer_UserIDField.Equals(value) != true)) {
-                    this.Buyer_UserIDField = value;
-                    this.RaisePropertyChanged("Buyer_UserID");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.DateTime DateOfDeal {
-            get {
-                return this.DateOfDealField;
-            }
-            set {
-                if ((this.DateOfDealField.Equals(value) != true)) {
-                    this.DateOfDealField = value;
-                    this.RaisePropertyChanged("DateOfDeal");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int DealID {
-            get {
-                return this.DealIDField;
-            }
-            set {
-                if ((this.DealIDField.Equals(value) != true)) {
-                    this.DealIDField = value;
-                    this.RaisePropertyChanged("DealID");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int KindOfCalculatingID {
-            get {
-                return this.KindOfCalculatingIDField;
-            }
-            set {
-                if ((this.KindOfCalculatingIDField.Equals(value) != true)) {
-                    this.KindOfCalculatingIDField = value;
-                    this.RaisePropertyChanged("KindOfCalculatingID");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public Client.DataAccessService.ObjectOfTransaction ObjectOfTransaction {
-            get {
-                return this.ObjectOfTransactionField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.ObjectOfTransactionField, value) != true)) {
-                    this.ObjectOfTransactionField = value;
-                    this.RaisePropertyChanged("ObjectOfTransaction");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int ObjectOfTransactionID {
-            get {
-                return this.ObjectOfTransactionIDField;
-            }
-            set {
-                if ((this.ObjectOfTransactionIDField.Equals(value) != true)) {
-                    this.ObjectOfTransactionIDField = value;
-                    this.RaisePropertyChanged("ObjectOfTransactionID");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string PersonalNumberOfDeal {
-            get {
-                return this.PersonalNumberOfDealField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.PersonalNumberOfDealField, value) != true)) {
-                    this.PersonalNumberOfDealField = value;
-                    this.RaisePropertyChanged("PersonalNumberOfDeal");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public Client.DataAccessService.User Seller {
-            get {
-                return this.SellerField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.SellerField, value) != true)) {
-                    this.SellerField = value;
-                    this.RaisePropertyChanged("Seller");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int Seller_UserID {
-            get {
-                return this.Seller_UserIDField;
-            }
-            set {
-                if ((this.Seller_UserIDField.Equals(value) != true)) {
-                    this.Seller_UserIDField = value;
-                    this.RaisePropertyChanged("Seller_UserID");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public decimal TransactionAmount {
-            get {
-                return this.TransactionAmountField;
-            }
-            set {
-                if ((this.TransactionAmountField.Equals(value) != true)) {
-                    this.TransactionAmountField = value;
-                    this.RaisePropertyChanged("TransactionAmount");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="User", Namespace="http://schemas.datacontract.org/2004/07/Entities.DbModels")]
-    [System.SerializableAttribute()]
-    public partial class User : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private Client.DataAccessService.Deal[] DealsField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string EmailField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string NameField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private Client.DataAccessService.ObjectOfTransaction[] ObjectOfTransactionsField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string PhoneNumberField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string SurnameField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int UserIDField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public Client.DataAccessService.Deal[] Deals {
-            get {
-                return this.DealsField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.DealsField, value) != true)) {
-                    this.DealsField = value;
-                    this.RaisePropertyChanged("Deals");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Email {
-            get {
-                return this.EmailField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.EmailField, value) != true)) {
-                    this.EmailField = value;
-                    this.RaisePropertyChanged("Email");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Name {
-            get {
-                return this.NameField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.NameField, value) != true)) {
-                    this.NameField = value;
-                    this.RaisePropertyChanged("Name");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public Client.DataAccessService.ObjectOfTransaction[] ObjectOfTransactions {
-            get {
-                return this.ObjectOfTransactionsField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.ObjectOfTransactionsField, value) != true)) {
-                    this.ObjectOfTransactionsField = value;
-                    this.RaisePropertyChanged("ObjectOfTransactions");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string PhoneNumber {
-            get {
-                return this.PhoneNumberField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.PhoneNumberField, value) != true)) {
-                    this.PhoneNumberField = value;
-                    this.RaisePropertyChanged("PhoneNumber");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Surname {
-            get {
-                return this.SurnameField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.SurnameField, value) != true)) {
-                    this.SurnameField = value;
-                    this.RaisePropertyChanged("Surname");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int UserID {
-            get {
-                return this.UserIDField;
-            }
-            set {
-                if ((this.UserIDField.Equals(value) != true)) {
-                    this.UserIDField = value;
-                    this.RaisePropertyChanged("UserID");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="ObjectOfTransaction", Namespace="http://schemas.datacontract.org/2004/07/Entities.DbModels")]
-    [System.SerializableAttribute()]
-    public partial class ObjectOfTransaction : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private decimal CostField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string DescriptionField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int KindOfCalculatingIDField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int ObjectOfTransactionIDField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int ObjectStateIDField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int ObjectTypeIDField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int ServiceTypeIDField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private Client.DataAccessService.User UserField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int UserIDField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public decimal Cost {
-            get {
-                return this.CostField;
-            }
-            set {
-                if ((this.CostField.Equals(value) != true)) {
-                    this.CostField = value;
-                    this.RaisePropertyChanged("Cost");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Description {
-            get {
-                return this.DescriptionField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.DescriptionField, value) != true)) {
-                    this.DescriptionField = value;
-                    this.RaisePropertyChanged("Description");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int KindOfCalculatingID {
-            get {
-                return this.KindOfCalculatingIDField;
-            }
-            set {
-                if ((this.KindOfCalculatingIDField.Equals(value) != true)) {
-                    this.KindOfCalculatingIDField = value;
-                    this.RaisePropertyChanged("KindOfCalculatingID");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int ObjectOfTransactionID {
-            get {
-                return this.ObjectOfTransactionIDField;
-            }
-            set {
-                if ((this.ObjectOfTransactionIDField.Equals(value) != true)) {
-                    this.ObjectOfTransactionIDField = value;
-                    this.RaisePropertyChanged("ObjectOfTransactionID");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int ObjectStateID {
-            get {
-                return this.ObjectStateIDField;
-            }
-            set {
-                if ((this.ObjectStateIDField.Equals(value) != true)) {
-                    this.ObjectStateIDField = value;
-                    this.RaisePropertyChanged("ObjectStateID");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int ObjectTypeID {
-            get {
-                return this.ObjectTypeIDField;
-            }
-            set {
-                if ((this.ObjectTypeIDField.Equals(value) != true)) {
-                    this.ObjectTypeIDField = value;
-                    this.RaisePropertyChanged("ObjectTypeID");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int ServiceTypeID {
-            get {
-                return this.ServiceTypeIDField;
-            }
-            set {
-                if ((this.ServiceTypeIDField.Equals(value) != true)) {
-                    this.ServiceTypeIDField = value;
-                    this.RaisePropertyChanged("ServiceTypeID");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public Client.DataAccessService.User User {
-            get {
-                return this.UserField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.UserField, value) != true)) {
-                    this.UserField = value;
-                    this.RaisePropertyChanged("User");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int UserID {
-            get {
-                return this.UserIDField;
-            }
-            set {
-                if ((this.UserIDField.Equals(value) != true)) {
-                    this.UserIDField = value;
-                    this.RaisePropertyChanged("UserID");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="DataAccessService.IDataService")]
     public interface IDataService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IDataService/GetDeals", ReplyAction="http://tempuri.org/IDataService/GetDealsResponse")]
-        Client.DataAccessService.ViewDeal[] GetDeals();
+        Entities.ViewModels.ViewDeal[] GetDeals();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IDataService/GetDeals", ReplyAction="http://tempuri.org/IDataService/GetDealsResponse")]
-        System.Threading.Tasks.Task<Client.DataAccessService.ViewDeal[]> GetDealsAsync();
+        System.Threading.Tasks.Task<Entities.ViewModels.ViewDeal[]> GetDealsAsync();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IDataService/GetUsers", ReplyAction="http://tempuri.org/IDataService/GetUsersResponse")]
-        Client.DataAccessService.ViewUser[] GetUsers();
+        Entities.ViewModels.ViewUser[] GetUsers();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IDataService/GetUsers", ReplyAction="http://tempuri.org/IDataService/GetUsersResponse")]
-        System.Threading.Tasks.Task<Client.DataAccessService.ViewUser[]> GetUsersAsync();
+        System.Threading.Tasks.Task<Entities.ViewModels.ViewUser[]> GetUsersAsync();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IDataService/GetObjectOfTransactions", ReplyAction="http://tempuri.org/IDataService/GetObjectOfTransactionsResponse")]
-        Client.DataAccessService.ViewObjOfTransact[] GetObjectOfTransactions();
+        Entities.ViewModels.ViewObjOfTransact[] GetObjectOfTransactions();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IDataService/GetObjectOfTransactions", ReplyAction="http://tempuri.org/IDataService/GetObjectOfTransactionsResponse")]
-        System.Threading.Tasks.Task<Client.DataAccessService.ViewObjOfTransact[]> GetObjectOfTransactionsAsync();
+        System.Threading.Tasks.Task<Entities.ViewModels.ViewObjOfTransact[]> GetObjectOfTransactionsAsync();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IDataService/GetDealById", ReplyAction="http://tempuri.org/IDataService/GetDealByIdResponse")]
-        Client.DataAccessService.Deal GetDealById(int id);
+        Entities.DbModels.Deal GetDealById(int id);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IDataService/GetDealById", ReplyAction="http://tempuri.org/IDataService/GetDealByIdResponse")]
-        System.Threading.Tasks.Task<Client.DataAccessService.Deal> GetDealByIdAsync(int id);
+        System.Threading.Tasks.Task<Entities.DbModels.Deal> GetDealByIdAsync(int id);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IDataService/GetUserById", ReplyAction="http://tempuri.org/IDataService/GetUserByIdResponse")]
-        Client.DataAccessService.User GetUserById(int id);
+        Entities.DbModels.User GetUserById(int id);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IDataService/GetUserById", ReplyAction="http://tempuri.org/IDataService/GetUserByIdResponse")]
-        System.Threading.Tasks.Task<Client.DataAccessService.User> GetUserByIdAsync(int id);
+        System.Threading.Tasks.Task<Entities.DbModels.User> GetUserByIdAsync(int id);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IDataService/GetObjectOfTransactionById", ReplyAction="http://tempuri.org/IDataService/GetObjectOfTransactionByIdResponse")]
-        Client.DataAccessService.ObjectOfTransaction GetObjectOfTransactionById(int id);
+        Entities.DbModels.ObjectOfTransaction GetObjectOfTransactionById(int id);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IDataService/GetObjectOfTransactionById", ReplyAction="http://tempuri.org/IDataService/GetObjectOfTransactionByIdResponse")]
-        System.Threading.Tasks.Task<Client.DataAccessService.ObjectOfTransaction> GetObjectOfTransactionByIdAsync(int id);
+        System.Threading.Tasks.Task<Entities.DbModels.ObjectOfTransaction> GetObjectOfTransactionByIdAsync(int id);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IDataService/AddDeal", ReplyAction="http://tempuri.org/IDataService/AddDealResponse")]
-        void AddDeal(Client.DataAccessService.ViewDeal deal);
+        void AddDeal(Entities.ViewModels.ViewDeal deal);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IDataService/AddDeal", ReplyAction="http://tempuri.org/IDataService/AddDealResponse")]
-        System.Threading.Tasks.Task AddDealAsync(Client.DataAccessService.ViewDeal deal);
+        System.Threading.Tasks.Task AddDealAsync(Entities.ViewModels.ViewDeal deal);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IDataService/AddUser", ReplyAction="http://tempuri.org/IDataService/AddUserResponse")]
-        void AddUser(Client.DataAccessService.ViewUser user);
+        void AddUser(Entities.ViewModels.ViewUser user);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IDataService/AddUser", ReplyAction="http://tempuri.org/IDataService/AddUserResponse")]
-        System.Threading.Tasks.Task AddUserAsync(Client.DataAccessService.ViewUser user);
+        System.Threading.Tasks.Task AddUserAsync(Entities.ViewModels.ViewUser user);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IDataService/AddObjectOfTransaction", ReplyAction="http://tempuri.org/IDataService/AddObjectOfTransactionResponse")]
-        void AddObjectOfTransaction(Client.DataAccessService.ViewObjOfTransact objectOfTransaction);
+        void AddObjectOfTransaction(Entities.ViewModels.ViewObjOfTransact objectOfTransaction);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IDataService/AddObjectOfTransaction", ReplyAction="http://tempuri.org/IDataService/AddObjectOfTransactionResponse")]
-        System.Threading.Tasks.Task AddObjectOfTransactionAsync(Client.DataAccessService.ViewObjOfTransact objectOfTransaction);
+        System.Threading.Tasks.Task AddObjectOfTransactionAsync(Entities.ViewModels.ViewObjOfTransact objectOfTransaction);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IDataService/DeleteDeal", ReplyAction="http://tempuri.org/IDataService/DeleteDealResponse")]
-        void DeleteDeal(Client.DataAccessService.ViewDeal deal);
+        void DeleteDeal(Entities.ViewModels.ViewDeal deal);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IDataService/DeleteDeal", ReplyAction="http://tempuri.org/IDataService/DeleteDealResponse")]
-        System.Threading.Tasks.Task DeleteDealAsync(Client.DataAccessService.ViewDeal deal);
+        System.Threading.Tasks.Task DeleteDealAsync(Entities.ViewModels.ViewDeal deal);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IDataService/DeleteUser", ReplyAction="http://tempuri.org/IDataService/DeleteUserResponse")]
-        void DeleteUser(Client.DataAccessService.ViewUser user);
+        void DeleteUser(Entities.ViewModels.ViewUser user);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IDataService/DeleteUser", ReplyAction="http://tempuri.org/IDataService/DeleteUserResponse")]
-        System.Threading.Tasks.Task DeleteUserAsync(Client.DataAccessService.ViewUser user);
+        System.Threading.Tasks.Task DeleteUserAsync(Entities.ViewModels.ViewUser user);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IDataService/DeleteObjectOfTransaction", ReplyAction="http://tempuri.org/IDataService/DeleteObjectOfTransactionResponse")]
-        void DeleteObjectOfTransaction(Client.DataAccessService.ViewObjOfTransact objectOfTransaction);
+        void DeleteObjectOfTransaction(Entities.ViewModels.ViewObjOfTransact objectOfTransaction);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IDataService/DeleteObjectOfTransaction", ReplyAction="http://tempuri.org/IDataService/DeleteObjectOfTransactionResponse")]
-        System.Threading.Tasks.Task DeleteObjectOfTransactionAsync(Client.DataAccessService.ViewObjOfTransact objectOfTransaction);
+        System.Threading.Tasks.Task DeleteObjectOfTransactionAsync(Entities.ViewModels.ViewObjOfTransact objectOfTransaction);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IDataService/UpdateDeal", ReplyAction="http://tempuri.org/IDataService/UpdateDealResponse")]
-        void UpdateDeal(Client.DataAccessService.ViewDeal deal);
+        void UpdateDeal(Entities.ViewModels.ViewDeal deal);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IDataService/UpdateDeal", ReplyAction="http://tempuri.org/IDataService/UpdateDealResponse")]
-        System.Threading.Tasks.Task UpdateDealAsync(Client.DataAccessService.ViewDeal deal);
+        System.Threading.Tasks.Task UpdateDealAsync(Entities.ViewModels.ViewDeal deal);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IDataService/UpdateUser", ReplyAction="http://tempuri.org/IDataService/UpdateUserResponse")]
-        void UpdateUser(Client.DataAccessService.ViewUser user);
+        void UpdateUser(Entities.ViewModels.ViewUser user);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IDataService/UpdateUser", ReplyAction="http://tempuri.org/IDataService/UpdateUserResponse")]
-        System.Threading.Tasks.Task UpdateUserAsync(Client.DataAccessService.ViewUser user);
+        System.Threading.Tasks.Task UpdateUserAsync(Entities.ViewModels.ViewUser user);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IDataService/UpdateObjectOfTransaction", ReplyAction="http://tempuri.org/IDataService/UpdateObjectOfTransactionResponse")]
-        void UpdateObjectOfTransaction(Client.DataAccessService.ViewObjOfTransact objectOfTransaction);
+        void UpdateObjectOfTransaction(Entities.ViewModels.ViewObjOfTransact objectOfTransaction);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IDataService/UpdateObjectOfTransaction", ReplyAction="http://tempuri.org/IDataService/UpdateObjectOfTransactionResponse")]
-        System.Threading.Tasks.Task UpdateObjectOfTransactionAsync(Client.DataAccessService.ViewObjOfTransact objectOfTransaction);
+        System.Threading.Tasks.Task UpdateObjectOfTransactionAsync(Entities.ViewModels.ViewObjOfTransact objectOfTransaction);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IDataService/GetUsersId", ReplyAction="http://tempuri.org/IDataService/GetUsersIdResponse")]
         int[] GetUsersId();
@@ -1206,123 +145,123 @@ namespace Client.DataAccessService {
                 base(binding, remoteAddress) {
         }
         
-        public Client.DataAccessService.ViewDeal[] GetDeals() {
+        public Entities.ViewModels.ViewDeal[] GetDeals() {
             return base.Channel.GetDeals();
         }
         
-        public System.Threading.Tasks.Task<Client.DataAccessService.ViewDeal[]> GetDealsAsync() {
+        public System.Threading.Tasks.Task<Entities.ViewModels.ViewDeal[]> GetDealsAsync() {
             return base.Channel.GetDealsAsync();
         }
         
-        public Client.DataAccessService.ViewUser[] GetUsers() {
+        public Entities.ViewModels.ViewUser[] GetUsers() {
             return base.Channel.GetUsers();
         }
         
-        public System.Threading.Tasks.Task<Client.DataAccessService.ViewUser[]> GetUsersAsync() {
+        public System.Threading.Tasks.Task<Entities.ViewModels.ViewUser[]> GetUsersAsync() {
             return base.Channel.GetUsersAsync();
         }
         
-        public Client.DataAccessService.ViewObjOfTransact[] GetObjectOfTransactions() {
+        public Entities.ViewModels.ViewObjOfTransact[] GetObjectOfTransactions() {
             return base.Channel.GetObjectOfTransactions();
         }
         
-        public System.Threading.Tasks.Task<Client.DataAccessService.ViewObjOfTransact[]> GetObjectOfTransactionsAsync() {
+        public System.Threading.Tasks.Task<Entities.ViewModels.ViewObjOfTransact[]> GetObjectOfTransactionsAsync() {
             return base.Channel.GetObjectOfTransactionsAsync();
         }
         
-        public Client.DataAccessService.Deal GetDealById(int id) {
+        public Entities.DbModels.Deal GetDealById(int id) {
             return base.Channel.GetDealById(id);
         }
         
-        public System.Threading.Tasks.Task<Client.DataAccessService.Deal> GetDealByIdAsync(int id) {
+        public System.Threading.Tasks.Task<Entities.DbModels.Deal> GetDealByIdAsync(int id) {
             return base.Channel.GetDealByIdAsync(id);
         }
         
-        public Client.DataAccessService.User GetUserById(int id) {
+        public Entities.DbModels.User GetUserById(int id) {
             return base.Channel.GetUserById(id);
         }
         
-        public System.Threading.Tasks.Task<Client.DataAccessService.User> GetUserByIdAsync(int id) {
+        public System.Threading.Tasks.Task<Entities.DbModels.User> GetUserByIdAsync(int id) {
             return base.Channel.GetUserByIdAsync(id);
         }
         
-        public Client.DataAccessService.ObjectOfTransaction GetObjectOfTransactionById(int id) {
+        public Entities.DbModels.ObjectOfTransaction GetObjectOfTransactionById(int id) {
             return base.Channel.GetObjectOfTransactionById(id);
         }
         
-        public System.Threading.Tasks.Task<Client.DataAccessService.ObjectOfTransaction> GetObjectOfTransactionByIdAsync(int id) {
+        public System.Threading.Tasks.Task<Entities.DbModels.ObjectOfTransaction> GetObjectOfTransactionByIdAsync(int id) {
             return base.Channel.GetObjectOfTransactionByIdAsync(id);
         }
         
-        public void AddDeal(Client.DataAccessService.ViewDeal deal) {
+        public void AddDeal(Entities.ViewModels.ViewDeal deal) {
             base.Channel.AddDeal(deal);
         }
         
-        public System.Threading.Tasks.Task AddDealAsync(Client.DataAccessService.ViewDeal deal) {
+        public System.Threading.Tasks.Task AddDealAsync(Entities.ViewModels.ViewDeal deal) {
             return base.Channel.AddDealAsync(deal);
         }
         
-        public void AddUser(Client.DataAccessService.ViewUser user) {
+        public void AddUser(Entities.ViewModels.ViewUser user) {
             base.Channel.AddUser(user);
         }
         
-        public System.Threading.Tasks.Task AddUserAsync(Client.DataAccessService.ViewUser user) {
+        public System.Threading.Tasks.Task AddUserAsync(Entities.ViewModels.ViewUser user) {
             return base.Channel.AddUserAsync(user);
         }
         
-        public void AddObjectOfTransaction(Client.DataAccessService.ViewObjOfTransact objectOfTransaction) {
+        public void AddObjectOfTransaction(Entities.ViewModels.ViewObjOfTransact objectOfTransaction) {
             base.Channel.AddObjectOfTransaction(objectOfTransaction);
         }
         
-        public System.Threading.Tasks.Task AddObjectOfTransactionAsync(Client.DataAccessService.ViewObjOfTransact objectOfTransaction) {
+        public System.Threading.Tasks.Task AddObjectOfTransactionAsync(Entities.ViewModels.ViewObjOfTransact objectOfTransaction) {
             return base.Channel.AddObjectOfTransactionAsync(objectOfTransaction);
         }
         
-        public void DeleteDeal(Client.DataAccessService.ViewDeal deal) {
+        public void DeleteDeal(Entities.ViewModels.ViewDeal deal) {
             base.Channel.DeleteDeal(deal);
         }
         
-        public System.Threading.Tasks.Task DeleteDealAsync(Client.DataAccessService.ViewDeal deal) {
+        public System.Threading.Tasks.Task DeleteDealAsync(Entities.ViewModels.ViewDeal deal) {
             return base.Channel.DeleteDealAsync(deal);
         }
         
-        public void DeleteUser(Client.DataAccessService.ViewUser user) {
+        public void DeleteUser(Entities.ViewModels.ViewUser user) {
             base.Channel.DeleteUser(user);
         }
         
-        public System.Threading.Tasks.Task DeleteUserAsync(Client.DataAccessService.ViewUser user) {
+        public System.Threading.Tasks.Task DeleteUserAsync(Entities.ViewModels.ViewUser user) {
             return base.Channel.DeleteUserAsync(user);
         }
         
-        public void DeleteObjectOfTransaction(Client.DataAccessService.ViewObjOfTransact objectOfTransaction) {
+        public void DeleteObjectOfTransaction(Entities.ViewModels.ViewObjOfTransact objectOfTransaction) {
             base.Channel.DeleteObjectOfTransaction(objectOfTransaction);
         }
         
-        public System.Threading.Tasks.Task DeleteObjectOfTransactionAsync(Client.DataAccessService.ViewObjOfTransact objectOfTransaction) {
+        public System.Threading.Tasks.Task DeleteObjectOfTransactionAsync(Entities.ViewModels.ViewObjOfTransact objectOfTransaction) {
             return base.Channel.DeleteObjectOfTransactionAsync(objectOfTransaction);
         }
         
-        public void UpdateDeal(Client.DataAccessService.ViewDeal deal) {
+        public void UpdateDeal(Entities.ViewModels.ViewDeal deal) {
             base.Channel.UpdateDeal(deal);
         }
         
-        public System.Threading.Tasks.Task UpdateDealAsync(Client.DataAccessService.ViewDeal deal) {
+        public System.Threading.Tasks.Task UpdateDealAsync(Entities.ViewModels.ViewDeal deal) {
             return base.Channel.UpdateDealAsync(deal);
         }
         
-        public void UpdateUser(Client.DataAccessService.ViewUser user) {
+        public void UpdateUser(Entities.ViewModels.ViewUser user) {
             base.Channel.UpdateUser(user);
         }
         
-        public System.Threading.Tasks.Task UpdateUserAsync(Client.DataAccessService.ViewUser user) {
+        public System.Threading.Tasks.Task UpdateUserAsync(Entities.ViewModels.ViewUser user) {
             return base.Channel.UpdateUserAsync(user);
         }
         
-        public void UpdateObjectOfTransaction(Client.DataAccessService.ViewObjOfTransact objectOfTransaction) {
+        public void UpdateObjectOfTransaction(Entities.ViewModels.ViewObjOfTransact objectOfTransaction) {
             base.Channel.UpdateObjectOfTransaction(objectOfTransaction);
         }
         
-        public System.Threading.Tasks.Task UpdateObjectOfTransactionAsync(Client.DataAccessService.ViewObjOfTransact objectOfTransaction) {
+        public System.Threading.Tasks.Task UpdateObjectOfTransactionAsync(Entities.ViewModels.ViewObjOfTransact objectOfTransaction) {
             return base.Channel.UpdateObjectOfTransactionAsync(objectOfTransaction);
         }
         

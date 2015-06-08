@@ -7,7 +7,7 @@ using Entities.SupportEntities;
 
 namespace Entities.ViewModels
 {
-    public class ViewObjOfTransact
+    public partial class ViewObjOfTransact
     {
         public int ObjectOfTransactionID { get; set; }
         public int UserID { get; set; }
@@ -20,5 +20,29 @@ namespace Entities.ViewModels
 
         public decimal Cost { get; set; }
         public string Description { get; set; }
+
+        public override string ToString()
+        {
+            return "ObjectOfTransactionID: " + ObjectOfTransactionID +
+                "\nUserInfo: " + UserInfo +
+                "\nObjectType: " + ObjectType +
+                "\nServiceType: " + ServiceType +
+                "\nKindOfCalculating: " + KindOfCalculating +
+                "\nObjectState: " + ObjectState +
+                "\nCost: " + Cost +
+                "\nDescription: " + Description;
+        }
+
+        public string AsString()
+        {
+            return "ObjectOfTransactionID: " + ObjectOfTransactionID +
+               "\nUserInfo: " + UserInfo +
+               "\nObjectType: " + ObjectType +
+               "\nServiceType: " + ServiceType +
+               "\nKindOfCalculating: " + KindOfCalculating +
+               "\nObjectState: " + ObjectState +
+               "\nCost: " + Cost +
+               "\nDescription: " + Description;
+        }
     }
 }

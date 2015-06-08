@@ -7,7 +7,7 @@ using Entities.SupportEntities;
 
 namespace Entities.ViewModels
 {
-    public class ViewDeal
+    public partial class ViewDeal
     {
         public int DealID { get; set; }
         public int ObjectOfTransactionID { get; set; }
@@ -22,5 +22,27 @@ namespace Entities.ViewModels
         public EnumKindOfCalculating KindOfCalculatingID { get; set; }
         public DateTime DateOfDeal { get; set; }
         public decimal TransactionAmount { get; set; }
+
+        public override string ToString()
+        {
+            return "DealID: " + DealID +
+                "\nObjectOfTransactionID: " + ObjectOfTransactionID + 
+                "\nPersonalNumberOfDeal: " + PersonalNumberOfDeal + 
+                "\n-----------------------------------"+
+                "\nSellerInfo: " + SellerInfo +
+                "\n-----------------------------------" +
+                "\nBuyerInfo: " + BuyerInfo +
+                "\n-----------------------------------" +
+                "\nObjOfTransactInfo: " + ObjectOfTransactionInfo;
+        }
+        public string AsString()
+        {
+            return "DealID: " + DealID +
+               "\nObjectOfTransactionID: " + ObjectOfTransactionID +
+               "\nPersonalNumberOfDeal: " + PersonalNumberOfDeal +
+               "\nSellerInfo: " + SellerInfo +
+               "\nBuyerInfo: " + BuyerInfo +
+               "\nObjOfTransactInfo: " + ObjectOfTransactionInfo;
+        }
     }
 }

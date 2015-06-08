@@ -59,6 +59,9 @@
     <Compile Include="OtherWindows\DealWindow.xaml.cs">
       <DependentUpon>DealWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="OtherWindows\DeleteWindow.xaml.cs">
+      <DependentUpon>DeleteWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="OtherWindows\ObjOfTransactWindow.xaml.cs">
       <DependentUpon>ObjOfTransactWindow.xaml</DependentUpon>
     </Compile>
@@ -83,6 +86,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="OtherWindows\DealWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="OtherWindows\DeleteWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -113,29 +120,17 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="Properties\DataSources\Entities.DbModels.Deal.datasource" />
+    <None Include="Properties\DataSources\Entities.DbModels.ObjectOfTransaction.datasource" />
+    <None Include="Properties\DataSources\Entities.DbModels.User.datasource" />
+    <None Include="Properties\DataSources\Entities.ViewModels.ViewDeal.datasource" />
+    <None Include="Properties\DataSources\Entities.ViewModels.ViewObjOfTransact.datasource" />
+    <None Include="Properties\DataSources\Entities.ViewModels.ViewUser.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
     <AppDesigner Include="Properties\" />
-    <None Include="Service References\DataAccessService\Client.DataAccessService.Deal.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Service References\DataAccessService\Client.DataAccessService.ObjectOfTransaction.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Service References\DataAccessService\Client.DataAccessService.User.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Service References\DataAccessService\Client.DataAccessService.ViewDeal.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Service References\DataAccessService\Client.DataAccessService.ViewObjOfTransact.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Service References\DataAccessService\Client.DataAccessService.ViewUser.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
     <None Include="Service References\DataAccessService\DataService.wsdl" />
     <None Include="Service References\DataAccessService\DataService.xsd">
       <SubType>Designer</SubType>
@@ -180,7 +175,12 @@
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\Entities\Entities.csproj">
+      <Project>{d4a5c197-a8ef-4fec-a24c-214b6cc635a8}</Project>
+      <Name>Entities</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

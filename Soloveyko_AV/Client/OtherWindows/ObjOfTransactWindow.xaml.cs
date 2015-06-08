@@ -12,6 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using Client.DataAccessService;
+using Entities.SupportEntities;
+using Entities.ViewModels;
 
 namespace Client.OtherWindows
 {
@@ -34,10 +36,10 @@ namespace Client.OtherWindows
             objOfTransact = obj;
             using (var data = new DataServiceClient())
             {
-                var items = data.GetUsersId().ToList();
-                ComboBox_UserId.ItemsSource = items;
+                ComboBox_UserId.ItemsSource = data.GetUsersId().ToList();
             }
 
+            ComboBox_UserId.Text = objOfTransact.UserID.ToString();
             ComboBox_ObjectType.ItemsSource = Enum.GetValues(typeof(EnumObjectType));
             ComboBox_ObjectType.SelectedIndex = 0;
             ComboBox_ServiceType.ItemsSource = Enum.GetValues(typeof(EnumServiceType));
