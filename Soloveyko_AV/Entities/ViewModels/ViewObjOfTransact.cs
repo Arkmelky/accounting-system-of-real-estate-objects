@@ -35,14 +35,14 @@ namespace Entities.ViewModels
 
         public string AsString()
         {
-            return "ObjectOfTransactionID: " + ObjectOfTransactionID +
-               "\nUserInfo: " + UserInfo +
-               "\nObjectType: " + ObjectType +
-               "\nServiceType: " + ServiceType +
-               "\nKindOfCalculating: " + KindOfCalculating +
-               "\nObjectState: " + ObjectState +
-               "\nCost: " + Cost +
-               "\nDescription: " + Description;
+            return  ObjectOfTransactionID +
+                UserInfo +
+                ObjectType +
+                ServiceType +
+                KindOfCalculating +
+                ObjectState +
+                Cost +
+                Description;
         }
     }
 }

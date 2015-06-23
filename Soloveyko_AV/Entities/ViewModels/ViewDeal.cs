@@ -37,12 +37,12 @@ namespace Entities.ViewModels
         }
         public string AsString()
         {
-            return "DealID: " + DealID +
-               "\nObjectOfTransactionID: " + ObjectOfTransactionID +
-               "\nPersonalNumberOfDeal: " + PersonalNumberOfDeal +
-               "\nSellerInfo: " + SellerInfo +
-               "\nBuyerInfo: " + BuyerInfo +
-               "\nObjOfTransactInfo: " + ObjectOfTransactionInfo;
+            return  DealID +
+                ObjectOfTransactionID +
+                PersonalNumberOfDeal +
+                SellerInfo +
+                BuyerInfo +
+                ObjectOfTransactionInfo;
         }
     }
 }

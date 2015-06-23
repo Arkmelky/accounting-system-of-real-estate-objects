@@ -25,12 +25,7 @@ namespace Entities.ViewModels
 
         public string AsString()
         {
-            return "UserID: " + UserID +
-                "\nName: " + Name +
-                "\nSurname: " + Surname +
-                "\nPhoneNumber: " + PhoneNumber +
-                "\nPhoneNumber: " + PhoneNumber +
-                "\nEmail: " + Email;
+            return  UserID + Name + Surname + PhoneNumber + PhoneNumber + Email;
         }
     }
 }

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -12,6 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Client.AdditionalFunctionality;
 using Client.DataAccessService;
 using Client.OtherWindows;
 using Entities.ViewModels;
@@ -27,6 +29,9 @@ namespace Client
         {
             InitializeComponent();
             UpdateData();
+
+            TextBox_SearchValue.IsEnabled = false;
+            Button_Search.IsEnabled = false;
         }
 
         private void Button_Click_Add(object sender, RoutedEventArgs e)
@@ -58,7 +63,7 @@ namespace Client
         {
             using (var dataAccess = new DataServiceClient())
             {
-                DataGrid_Users.ItemsSource = dataAccess.GetUsers().ToList();
+                DataGrid_Users.ItemsSource = dataAccess.GetUsers();
                 DataGrid_Users.IsReadOnly = true;
 
                 DataGrid_ObjOfTransact.ItemsSource = dataAccess.GetObjectOfTransactions();
@@ -188,6 +193,95 @@ namespace Client
                     MessageBox.Show("Select some item!");
                 }
 
+            }
+        }
+
+        private void Button_Search_Click(object sender, RoutedEventArgs e)
+        {
+            if (TabItem_Users.IsSelected)
+            {
+                if (TextBox_SearchValue.Text != "")
+                {
+                    List<ViewUser> list = new List<ViewUser>();
+                    using (var db = new DataServiceClient())
+                    {
+                        foreach (var item in db.GetUsers())
+                        {
+                            if (SearchHelper.CompareStrings(TextBox_SearchValue.Text, item.AsString()))
+                            {
+                                list.Add(item);
+                            }
+                        }
+                    }
+                    DataGrid_Users.ItemsSource = list;
+                }
+                else
+                {
+                    MessageBox.Show("Enter some value");
+                }
+
+            }
+            else if (TabItem_ObjOfTransact.IsSelected)
+            {
+                if (TextBox_SearchValue.Text != "")
+                {
+                    List<ViewObjOfTransact> list = new List<ViewObjOfTransact>();
+                    using (var db = new DataServiceClient())
+                    {
+                        foreach (var item in db.GetObjectOfTransactions())
+                        {
+                            if (SearchHelper.CompareStrings(TextBox_SearchValue.Text, item.AsString()))
+                            {
+                                list.Add(item);
+                            }
+                        }
+                    }
+                    DataGrid_ObjOfTransact.ItemsSource = list;
+                }
+                else
+                {
+                    MessageBox.Show("Enter some value");
+                }
+
+            }
+            else if (TabItem_Deals.IsSelected)
+            {
+                if (TextBox_SearchValue.Text != "")
+                {
+                    List<ViewDeal> list = new List<ViewDeal>();
+                    using (var db = new DataServiceClient())
+                    {
+                        foreach (var item in db.GetDeals())
+                        {
+                            if (SearchHelper.CompareStrings(TextBox_SearchValue.Text, item.AsString()))
+                            {
+                                list.Add(item);
+                            }
+                        }
+                    }
+                    DataGrid_Deals.ItemsSource = list;
+                }
+                else
+                {
+                    MessageBox.Show("Enter some value");
+                }
+
+            }
+        }
+
+        private void CheckBox_ActivateSearch_Click_1(object sender, RoutedEventArgs e)
+        {
+            if (CheckBox_ActivateSearch.IsChecked == true)
+            {
+                TextBox_SearchValue.IsEnabled = true;
+                Button_Search.IsEnabled = true;
+            }
+            else
+            {
+                TextBox_SearchValue.IsEnabled = false;
+                Button_Search.IsEnabled = false;
+
+                UpdateData();
             }
         }
     }
