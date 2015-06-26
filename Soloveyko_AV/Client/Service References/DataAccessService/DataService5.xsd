@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Entities.ChartModels" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Entities.ChartModels" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ChartRequestObject">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="from" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="objType" type="xs:int" />
+      <xs:element minOccurs="0" name="to" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ChartRequestObject" nillable="true" type="tns:ChartRequestObject" />
+  <xs:complexType name="ChartData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ApartmentProfit" type="xs:decimal" />
+      <xs:element minOccurs="0" name="CommercialPropertyProfit" type="xs:decimal" />
+      <xs:element minOccurs="0" name="HomesteadProfit" type="xs:decimal" />
+      <xs:element minOccurs="0" name="HouseProfit" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ChartData" nillable="true" type="tns:ChartData" />
+</xs:schema>

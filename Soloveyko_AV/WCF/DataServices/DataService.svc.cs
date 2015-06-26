@@ -5,6 +5,7 @@ using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.Text;
 using DataAccess;
+using Entities.ChartModels;
 using Entities.DbModels;
 using Entities.ObjectConverter;
 using Entities.ViewModels;
@@ -89,6 +90,11 @@ namespace WCF.DataServices
         public List<int> GetObjOfTransactId()
         {
             return DataManager.GetObjOfTransactId();
+        }
+
+        public ChartData GetSummaryOfProfits(ChartRequestObject chartLetter)
+        {
+            return DataManager.GetSummaryOfProfits(chartLetter);
         }
     }
 }

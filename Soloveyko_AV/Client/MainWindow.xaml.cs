@@ -14,6 +14,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Client.AdditionalFunctionality;
+using Client.ChartForm;
 using Client.DataAccessService;
 using Client.OtherWindows;
 using Entities.ViewModels;
@@ -269,7 +270,7 @@ namespace Client
             }
         }
 
-        private void CheckBox_ActivateSearch_Click_1(object sender, RoutedEventArgs e)
+        private void CheckBox_ActivateSearch_Click(object sender, RoutedEventArgs e)
         {
             if (CheckBox_ActivateSearch.IsChecked == true)
             {
@@ -283,6 +284,12 @@ namespace Client
 
                 UpdateData();
             }
+        }
+
+        private void Button_Chart_Click(object sender, RoutedEventArgs e)
+        {
+            var chart = new ChartForm.ChartForm();
+            chart.ShowDialog();
         }
     }
 }

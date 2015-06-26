@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Entities.ChartModels;
 using Entities.DbModels;
+using Entities.SupportEntities;
 
 namespace DataAccess
 {
@@ -216,6 +218,30 @@ namespace DataAccess
             {
                 return db.ObjectOfTransactions.Select(x => x.ObjectOfTransactionID).ToList();
             }
+        }
+
+        public static ChartData GetSummaryOfProfits(ChartRequestObject chartLetter)
+        {
+            var chartData = new ChartData(); 
+            var list = new List<int>();
+
+            using (var db = new DB_Context())
+            {
+                foreach (var deal in db.Deals)
+                {
+                    if (deal.DateOfDeal >= chartLetter.from && deal.DateOfDeal <= chartLetter.to)
+                    {
+                        list.Add(deal.ObjectOfTransactionID);
+                    }
+                }
+
+                for (int i = 0; i < list.Count; i++)
+                {
+                    var obj = GetObjectOfTransactionFromDbById(list[i]);
+                    chartData.SetValueByProp((EnumObjectType)obj.ObjectTypeID,obj.Cost);
+                }
+            }
+            return chartData;
         }
     }
 }

@@ -9,7 +9,179 @@
 //------------------------------------------------------------------------------
 
 namespace Client.DataAccessService {
+    using System.Runtime.Serialization;
+    using System;
     
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="ChartRequestObject", Namespace="http://schemas.datacontract.org/2004/07/Entities.ChartModels")]
+    [System.SerializableAttribute()]
+    public partial class ChartRequestObject : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.DateTime fromField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int objTypeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.DateTime toField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.DateTime from {
+            get {
+                return this.fromField;
+            }
+            set {
+                if ((this.fromField.Equals(value) != true)) {
+                    this.fromField = value;
+                    this.RaisePropertyChanged("from");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int objType {
+            get {
+                return this.objTypeField;
+            }
+            set {
+                if ((this.objTypeField.Equals(value) != true)) {
+                    this.objTypeField = value;
+                    this.RaisePropertyChanged("objType");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.DateTime to {
+            get {
+                return this.toField;
+            }
+            set {
+                if ((this.toField.Equals(value) != true)) {
+                    this.toField = value;
+                    this.RaisePropertyChanged("to");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="ChartData", Namespace="http://schemas.datacontract.org/2004/07/Entities.ChartModels")]
+    [System.SerializableAttribute()]
+    public partial class ChartData : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private decimal ApartmentProfitField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private decimal CommercialPropertyProfitField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private decimal HomesteadProfitField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private decimal HouseProfitField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public decimal ApartmentProfit {
+            get {
+                return this.ApartmentProfitField;
+            }
+            set {
+                if ((this.ApartmentProfitField.Equals(value) != true)) {
+                    this.ApartmentProfitField = value;
+                    this.RaisePropertyChanged("ApartmentProfit");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public decimal CommercialPropertyProfit {
+            get {
+                return this.CommercialPropertyProfitField;
+            }
+            set {
+                if ((this.CommercialPropertyProfitField.Equals(value) != true)) {
+                    this.CommercialPropertyProfitField = value;
+                    this.RaisePropertyChanged("CommercialPropertyProfit");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public decimal HomesteadProfit {
+            get {
+                return this.HomesteadProfitField;
+            }
+            set {
+                if ((this.HomesteadProfitField.Equals(value) != true)) {
+                    this.HomesteadProfitField = value;
+                    this.RaisePropertyChanged("HomesteadProfit");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public decimal HouseProfit {
+            get {
+                return this.HouseProfitField;
+            }
+            set {
+                if ((this.HouseProfitField.Equals(value) != true)) {
+                    this.HouseProfitField = value;
+                    this.RaisePropertyChanged("HouseProfit");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="DataAccessService.IDataService")]
@@ -116,6 +288,12 @@ namespace Client.DataAccessService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IDataService/GetObjOfTransactId", ReplyAction="http://tempuri.org/IDataService/GetObjOfTransactIdResponse")]
         System.Threading.Tasks.Task<int[]> GetObjOfTransactIdAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IDataService/GetSummaryOfProfits", ReplyAction="http://tempuri.org/IDataService/GetSummaryOfProfitsResponse")]
+        Client.DataAccessService.ChartData GetSummaryOfProfits(Client.DataAccessService.ChartRequestObject chartLetter);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IDataService/GetSummaryOfProfits", ReplyAction="http://tempuri.org/IDataService/GetSummaryOfProfitsResponse")]
+        System.Threading.Tasks.Task<Client.DataAccessService.ChartData> GetSummaryOfProfitsAsync(Client.DataAccessService.ChartRequestObject chartLetter);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -279,6 +457,14 @@ namespace Client.DataAccessService {
         
         public System.Threading.Tasks.Task<int[]> GetObjOfTransactIdAsync() {
             return base.Channel.GetObjOfTransactIdAsync();
+        }
+        
+        public Client.DataAccessService.ChartData GetSummaryOfProfits(Client.DataAccessService.ChartRequestObject chartLetter) {
+            return base.Channel.GetSummaryOfProfits(chartLetter);
+        }
+        
+        public System.Threading.Tasks.Task<Client.DataAccessService.ChartData> GetSummaryOfProfitsAsync(Client.DataAccessService.ChartRequestObject chartLetter) {
+            return base.Channel.GetSummaryOfProfitsAsync(chartLetter);
         }
     }
 }

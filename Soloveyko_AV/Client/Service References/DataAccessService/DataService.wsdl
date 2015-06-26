@@ -8,6 +8,7 @@
       <xsd:import schemaLocation="http://localhost:31406/DataServices/DataService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Entities.SupportEntities" />
       <xsd:import schemaLocation="http://localhost:31406/DataServices/DataService.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/Entities.DbModels" />
       <xsd:import schemaLocation="http://localhost:31406/DataServices/DataService.svc?xsd=xsd5" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import schemaLocation="http://localhost:31406/DataServices/DataService.svc?xsd=xsd6" namespace="http://schemas.datacontract.org/2004/07/Entities.ChartModels" />
     </xsd:schema>
   </wsdl:types>
   <wsdl:message name="IDataService_GetDeals_InputMessage">
@@ -112,6 +113,12 @@
   <wsdl:message name="IDataService_GetObjOfTransactId_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetObjOfTransactIdResponse" />
   </wsdl:message>
+  <wsdl:message name="IDataService_GetSummaryOfProfits_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSummaryOfProfits" />
+  </wsdl:message>
+  <wsdl:message name="IDataService_GetSummaryOfProfits_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSummaryOfProfitsResponse" />
+  </wsdl:message>
   <wsdl:portType name="IDataService">
     <wsdl:operation name="GetDeals">
       <wsdl:input wsaw:Action="http://tempuri.org/IDataService/GetDeals" message="tns:IDataService_GetDeals_InputMessage" />
@@ -180,6 +187,10 @@
     <wsdl:operation name="GetObjOfTransactId">
       <wsdl:input wsaw:Action="http://tempuri.org/IDataService/GetObjOfTransactId" message="tns:IDataService_GetObjOfTransactId_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IDataService/GetObjOfTransactIdResponse" message="tns:IDataService_GetObjOfTransactId_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSummaryOfProfits">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataService/GetSummaryOfProfits" message="tns:IDataService_GetSummaryOfProfits_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataService/GetSummaryOfProfitsResponse" message="tns:IDataService_GetSummaryOfProfits_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IDataService" type="tns:IDataService">
@@ -330,6 +341,15 @@
     </wsdl:operation>
     <wsdl:operation name="GetObjOfTransactId">
       <soap:operation soapAction="http://tempuri.org/IDataService/GetObjOfTransactId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSummaryOfProfits">
+      <soap:operation soapAction="http://tempuri.org/IDataService/GetSummaryOfProfits" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

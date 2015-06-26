@@ -3,6 +3,7 @@
   <xs:import schemaLocation="http://localhost:31406/DataServices/DataService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Entities.ViewModels" />
   <xs:import schemaLocation="http://localhost:31406/DataServices/DataService.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/Entities.DbModels" />
   <xs:import schemaLocation="http://localhost:31406/DataServices/DataService.svc?xsd=xsd5" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:import schemaLocation="http://localhost:31406/DataServices/DataService.svc?xsd=xsd6" namespace="http://schemas.datacontract.org/2004/07/Entities.ChartModels" />
   <xs:element name="GetDeals">
     <xs:complexType>
       <xs:sequence />
@@ -210,6 +211,20 @@
     <xs:complexType>
       <xs:sequence>
         <xs:element xmlns:q17="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="GetObjOfTransactIdResult" nillable="true" type="q17:ArrayOfint" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSummaryOfProfits">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/Entities.ChartModels" minOccurs="0" name="chartLetter" nillable="true" type="q18:ChartRequestObject" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSummaryOfProfitsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q19="http://schemas.datacontract.org/2004/07/Entities.ChartModels" minOccurs="0" name="GetSummaryOfProfitsResult" nillable="true" type="q19:ChartData" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>

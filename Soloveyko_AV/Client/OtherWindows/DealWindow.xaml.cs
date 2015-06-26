@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using Client.DataAccessService;
+using Entities.DbModels;
 using Entities.SupportEntities;
 using Entities.ViewModels;
 
@@ -161,6 +162,22 @@ namespace Client.OtherWindows
 
             TextBox_PersonalNumberOfDeal.Text = viewDeal.PersonalNumberOfDeal;
             TextBox_TransactionAmount.Text = viewDeal.TransactionAmount.ToString();
+        }
+
+        private void ComboBox_ObjOfTransact_LostFocus(object sender, RoutedEventArgs e)
+        {
+            if (ComboBox_ObjOfTransact.Text != "0")
+            {
+                int id = 0;
+                ObjectOfTransaction obj;
+                int.TryParse(ComboBox_ObjOfTransact.Text, out id);
+                using (var service = new DataServiceClient())
+                {
+                    obj = service.GetObjectOfTransactionById(id);
+                    TextBox_TransactionAmount.Text = obj.Cost.ToString();
+                    ComboBox_KindOfCalc.Text = ((EnumKindOfCalculating)obj.KindOfCalculatingID).ToString();
+                }
+            }
         }
     }
 }

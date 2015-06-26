@@ -36,3 +36,4 @@ G:\OOP\Курсовой_6сем\Soloveyko_AV\Client\obj\Debug\Client.Properties.
 G:\OOP\Курсовой_6сем\Soloveyko_AV\Client\obj\Debug\Client.csproj.GenerateResource.Cache
 G:\OOP\Курсовой_6сем\Soloveyko_AV\Client\obj\Debug\Client.exe
 G:\OOP\Курсовой_6сем\Soloveyko_AV\Client\obj\Debug\Client.pdb
+G:\OOP\Курсовой_6сем\Soloveyko_AV\Client\obj\Debug\Client.ChartForm.ChartForm.resources

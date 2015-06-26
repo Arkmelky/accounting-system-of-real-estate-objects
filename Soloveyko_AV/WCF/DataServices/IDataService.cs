@@ -4,6 +4,7 @@ using System.Linq;
 using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.Text;
+using Entities.ChartModels;
 using Entities.DbModels;
 using Entities.ViewModels;
 
@@ -52,5 +53,8 @@ namespace WCF.DataServices
         List<int> GetUsersId();
         [OperationContract]
         List<int> GetObjOfTransactId();
+
+        [OperationContract]
+        ChartData GetSummaryOfProfits(ChartRequestObject chartLetter);
     }
 }
