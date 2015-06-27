@@ -29,10 +29,17 @@ namespace Client
         public MainWindow()
         {
             InitializeComponent();
-            UpdateData();
+            try
+            {
+                UpdateData();
 
-            TextBox_SearchValue.IsEnabled = false;
-            Button_Search.IsEnabled = false;
+                TextBox_SearchValue.IsEnabled = false;
+                Button_Search.IsEnabled = false;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Can not connect to service");
+            }
         }
 
         private void Button_Click_Add(object sender, RoutedEventArgs e)
