@@ -1,0 +1,570 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<componentModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner" dslVersion="1.0.0.0" Id="c04e2891-f758-4b38-bf8a-28ad12bd6e6e" name="UMLComponentDiagram_TEST" linkedPackageId="155ed581-9254-4625-8c91-0eea522aac17" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ComponentDesigner">
+  <profileInstances>
+    <packageHasProfileInstances Id="4bcc9b02-681a-4e2d-ba73-3df10d26fb16">
+      <profileInstance Id="d4a97357-af2f-4938-87ca-b6f4d1b53473" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="54fc48bd-dfe3-4830-99a6-c2548ac68f61">
+      <profileInstance Id="d2cffaa0-0c54-4641-ac39-10af4c4810ea" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <componentModelHasComponents>
+      <component Id="978fb2ef-0593-4a01-bd22-1c93d9145952" name="Клиент" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="d714e065-1c72-47e4-ba58-8fb4921556ae" />
+        <ownedAttributesInternal>
+          <part Id="888296bd-eaa5-41ce-9396-a93679560ce3" name="Интерфейс" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Composite" isComposite="true">
+            <elementDefinition Id="e10f3791-3153-43bb-b60c-a3a8dd0b4260" />
+            <targetNamedElementsInternal>
+              <connector Id="8272b579-d69f-46e5-b8b6-6b517b791df1" isLeaf="false" isStatic="false">
+                <partMoniker Id="ab7cfa93-72a3-4c86-8c63-1b674108ca12" LastKnownName="Сервис WCF" />
+                <relationshipOwnedElementsInternal>
+                  <connectorHasConnectorEnds>
+                    <connectorEnd Id="30370284-ea6f-49bb-8838-87f693713afc">
+                      <elementDefinition Id="dc0df0f1-1299-4056-85c9-8bd75f09b45c" />
+                      <portWithPart>
+                        <requiredInterfaceMoniker Id="b2daae46-f758-4a5c-b8f9-7ef1db954e09" LastKnownName="Port2" />
+                      </portWithPart>
+                    </connectorEnd>
+                  </connectorHasConnectorEnds>
+                  <connectorHasConnectorEnds>
+                    <connectorEnd Id="3ed2c9cb-1582-4a33-8282-8032ffa822f6">
+                      <elementDefinition Id="1ae789da-1396-4f8c-9a00-7745deabf5ac" />
+                      <portWithPart>
+                        <providedInterfaceMoniker Id="591a07a1-0e78-4721-96f5-c843bbc64063" LastKnownName="Port1" />
+                      </portWithPart>
+                    </connectorEnd>
+                  </connectorHasConnectorEnds>
+                </relationshipOwnedElementsInternal>
+                <elementDefinition Id="c8139f52-7e79-4aad-86a4-b3fa974f9eb1" />
+              </connector>
+            </targetNamedElementsInternal>
+            <type_NamedElement>
+              <componentMoniker Id="aacb6749-809c-44de-8f14-3c4738cb46a1" LastKnownName="Component2" />
+            </type_NamedElement>
+          </part>
+          <part Id="ab7cfa93-72a3-4c86-8c63-1b674108ca12" name="Сервис WCF" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Composite" isComposite="true">
+            <elementDefinition Id="9193e56d-1ceb-4254-90e1-09286760aebe" />
+            <targetNamedElementsInternal>
+              <connector Id="b0eac034-49ac-4ff8-bd01-9129d9935bbd" isLeaf="false" isStatic="false">
+                <partMoniker Id="888296bd-eaa5-41ce-9396-a93679560ce3" LastKnownName="Интерфейс" />
+                <relationshipOwnedElementsInternal>
+                  <connectorHasConnectorEnds>
+                    <connectorEnd Id="dfe13e7a-88ca-4de1-b3cf-c459abebaf2f">
+                      <elementDefinition Id="823ec33f-4697-46d4-aee2-047b2627421b" />
+                      <portWithPart>
+                        <requiredInterfaceMoniker Id="aac6ae00-b5dd-489f-9121-20ca56bccdb9" LastKnownName="Port2" />
+                      </portWithPart>
+                    </connectorEnd>
+                  </connectorHasConnectorEnds>
+                  <connectorHasConnectorEnds>
+                    <connectorEnd Id="f2341901-17dc-45fa-ab8b-c44d3ee0c68d">
+                      <elementDefinition Id="094f28c7-fe30-45e3-bfea-34869a4205db" />
+                      <portWithPart>
+                        <providedInterfaceMoniker Id="c7580f05-930e-44fb-9ee6-4ad6a1a98fc5" LastKnownName="Port1" />
+                      </portWithPart>
+                    </connectorEnd>
+                  </connectorHasConnectorEnds>
+                </relationshipOwnedElementsInternal>
+                <elementDefinition Id="21b0559a-4291-48b8-87a2-efb337fbad94" />
+              </connector>
+              <connector Id="5a0aac81-788c-4945-bf4b-8c3e775ade46" isLeaf="false" isStatic="false">
+                <requiredInterfaceMoniker Id="d942ca93-f2e6-4532-86a7-31a0bac7278c" LastKnownName="Port2" />
+                <relationshipOwnedElementsInternal>
+                  <connectorHasConnectorEnds>
+                    <connectorEnd Id="a3b9a6f7-a14a-4315-bbc9-b0cb3919de2c">
+                      <elementDefinition Id="17a5d73a-9dbe-4cb7-a822-adc782b921bd" />
+                      <portWithPart>
+                        <requiredInterfaceMoniker Id="5ae7d919-cdc8-4c99-964e-2415121a6f29" LastKnownName="Port3" />
+                      </portWithPart>
+                    </connectorEnd>
+                  </connectorHasConnectorEnds>
+                  <connectorHasConnectorEnds>
+                    <connectorEnd Id="f0e48fb4-914e-435c-a6e8-c731bd3908f0">
+                      <elementDefinition Id="3a42ef6b-812f-47de-a374-d149c3989a66" />
+                    </connectorEnd>
+                  </connectorHasConnectorEnds>
+                </relationshipOwnedElementsInternal>
+                <elementDefinition Id="0143d445-fdda-4a70-987b-0be606e4d73e" />
+              </connector>
+            </targetNamedElementsInternal>
+            <type_NamedElement>
+              <componentMoniker Id="62206c45-3c1b-4199-8ecd-6c9461436581" LastKnownName="Component1" />
+            </type_NamedElement>
+          </part>
+          <providedInterface Id="b5cceb4e-56a5-4634-bdcb-da2020635501" name="Port1" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isService="false" isBehavior="false">
+            <elementDefinition Id="fad775b0-d981-4d1b-9046-878433e3a542" />
+            <targetNamedElementsInternal>
+              <connector Id="2147d1ff-25ce-4d5d-b796-60511f8c458a" isLeaf="false" isStatic="false">
+                <partMoniker Id="ab7cfa93-72a3-4c86-8c63-1b674108ca12" LastKnownName="Сервис WCF" />
+                <relationshipOwnedElementsInternal>
+                  <connectorHasConnectorEnds>
+                    <connectorEnd Id="c0731f05-59ec-4648-9be5-9fcc811706c5">
+                      <elementDefinition Id="424a1f5c-5b34-4567-900b-91ebb7184295" />
+                    </connectorEnd>
+                  </connectorHasConnectorEnds>
+                  <connectorHasConnectorEnds>
+                    <connectorEnd Id="5c665df4-f545-442b-806a-5af6213b4642">
+                      <elementDefinition Id="cbbfd8e9-fa19-443c-be59-10421c635cbd" />
+                      <portWithPart>
+                        <providedInterfaceMoniker Id="bfcaf205-eaf3-4128-80e9-d0ef9c67fa20" LastKnownName="Port4" />
+                      </portWithPart>
+                    </connectorEnd>
+                  </connectorHasConnectorEnds>
+                </relationshipOwnedElementsInternal>
+                <elementDefinition Id="fa46390f-ac3f-4334-850b-ddcdf7f9b019" />
+              </connector>
+            </targetNamedElementsInternal>
+            <type_NamedElement>
+              <interfaceMoniker Id="312419bf-323a-424f-9e9c-2fb2f07a9293" LastKnownName="Прием данных" />
+            </type_NamedElement>
+          </providedInterface>
+          <requiredInterface Id="d942ca93-f2e6-4532-86a7-31a0bac7278c" name="Port2" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isService="false" isBehavior="false">
+            <elementDefinition Id="517f786e-ca9a-4371-a868-20a95442f51f" />
+            <suppliersInternal>
+              <dependency Id="0cd85769-5763-4eaf-a3ff-184b3b925306">
+                <providedInterfaceMoniker Id="d5f7c573-bf98-4174-a0f5-336c09272caf" LastKnownName="Port1" />
+                <elementDefinition Id="fabd05b3-e3d5-456a-aa04-3bdac2f4ddcc" />
+              </dependency>
+            </suppliersInternal>
+            <type_NamedElement>
+              <interfaceMoniker Id="45732570-a2dd-45f3-ad8e-dda99fad8a7b" LastKnownName="Отправка данных" />
+            </type_NamedElement>
+          </requiredInterface>
+        </ownedAttributesInternal>
+      </component>
+    </componentModelHasComponents>
+    <componentModelHasComponents>
+      <component Id="aacb6749-809c-44de-8f14-3c4738cb46a1" name="Component2" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="c5e9e907-ab06-4b60-aa0a-e3a9c6b7c441" />
+        <ownedAttributesInternal>
+          <providedInterface Id="c7580f05-930e-44fb-9ee6-4ad6a1a98fc5" name="Port1" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isService="false" isBehavior="false">
+            <elementDefinition Id="d1589a58-8b5f-4f70-8a7c-83f85eea1f2f" />
+            <type_NamedElement>
+              <interfaceMoniker Id="dddca80d-0845-4fbe-bf77-5f04bb6526eb" LastKnownName="Отображение" />
+            </type_NamedElement>
+          </providedInterface>
+          <requiredInterface Id="b2daae46-f758-4a5c-b8f9-7ef1db954e09" name="Port2" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isService="false" isBehavior="false">
+            <elementDefinition Id="2d1ed307-414e-4627-b20b-01d9712c7385" />
+            <type_NamedElement>
+              <interfaceMoniker Id="a1dd33e7-4b0c-419b-b30b-ff2285ef6636" LastKnownName="Запрос " />
+            </type_NamedElement>
+          </requiredInterface>
+        </ownedAttributesInternal>
+      </component>
+    </componentModelHasComponents>
+    <componentModelHasComponents>
+      <component Id="62206c45-3c1b-4199-8ecd-6c9461436581" name="Component1" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="5d206506-1c48-49de-a2d7-eb175bf433bc" />
+        <ownedAttributesInternal>
+          <providedInterface Id="591a07a1-0e78-4721-96f5-c843bbc64063" name="Port1" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isService="false" isBehavior="false">
+            <elementDefinition Id="86be56d8-d494-478d-873e-ce7090d9ae75" />
+            <type_NamedElement>
+              <interfaceMoniker Id="20b568db-e7a5-4117-9bdc-ddc5ac58a453" LastKnownName="Запрос" />
+            </type_NamedElement>
+          </providedInterface>
+          <requiredInterface Id="aac6ae00-b5dd-489f-9121-20ca56bccdb9" name="Port2" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isService="false" isBehavior="false">
+            <elementDefinition Id="977c2e66-1738-4464-8f91-9addc6ca1176" />
+            <type_NamedElement>
+              <interfaceMoniker Id="9abe33e0-e372-4509-948c-8ac72cb1cd7c" LastKnownName="Данные" />
+            </type_NamedElement>
+          </requiredInterface>
+          <requiredInterface Id="5ae7d919-cdc8-4c99-964e-2415121a6f29" name="Port3" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isService="false" isBehavior="false">
+            <elementDefinition Id="d2a6e58a-f145-437b-bac6-7d9f6c0e7774" />
+            <type_NamedElement>
+              <interfaceMoniker Id="bd15f16d-12f7-4c2e-8cfd-a088f0442409" LastKnownName="Отправка данных" />
+            </type_NamedElement>
+          </requiredInterface>
+          <providedInterface Id="bfcaf205-eaf3-4128-80e9-d0ef9c67fa20" name="Port4" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isService="false" isBehavior="false">
+            <elementDefinition Id="38e46200-af57-40c7-beb4-277e5993e5d8" />
+            <type_NamedElement>
+              <interfaceMoniker Id="8c1f9153-b280-42c9-96af-48d78f6ac36e" LastKnownName="Прием данных" />
+            </type_NamedElement>
+          </providedInterface>
+        </ownedAttributesInternal>
+      </component>
+    </componentModelHasComponents>
+    <modelContainsNamedElements>
+      <Interface Id="dddca80d-0845-4fbe-bf77-5f04bb6526eb" name="Отображение" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="fd96390f-20df-467e-bdd9-bd753644a686" />
+      </Interface>
+    </modelContainsNamedElements>
+    <modelContainsNamedElements>
+      <Interface Id="a1dd33e7-4b0c-419b-b30b-ff2285ef6636" name="Запрос " isAbstract="false" isLeaf="false">
+        <elementDefinition Id="7958ac3b-8dd3-4ae3-ae1d-2cd641f9a3f9" />
+      </Interface>
+    </modelContainsNamedElements>
+    <modelContainsNamedElements>
+      <Interface Id="20b568db-e7a5-4117-9bdc-ddc5ac58a453" name="Запрос" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="5e1f0fe8-7aa4-4926-ab69-6d846c6ec294" />
+      </Interface>
+    </modelContainsNamedElements>
+    <modelContainsNamedElements>
+      <Interface Id="9abe33e0-e372-4509-948c-8ac72cb1cd7c" name="Данные" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="7037c54c-8091-40eb-9da6-70e633342e4d" />
+      </Interface>
+    </modelContainsNamedElements>
+    <modelContainsNamedElements>
+      <Interface Id="bd15f16d-12f7-4c2e-8cfd-a088f0442409" name="Отправка данных" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="eda7bbc7-4a36-49d6-9d5e-de64686883df" />
+      </Interface>
+    </modelContainsNamedElements>
+    <modelContainsNamedElements>
+      <Interface Id="8c1f9153-b280-42c9-96af-48d78f6ac36e" name="Прием данных" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="70dc21b8-18c0-4890-87fb-7247629f126f" />
+      </Interface>
+    </modelContainsNamedElements>
+    <modelContainsNamedElements>
+      <Interface Id="312419bf-323a-424f-9e9c-2fb2f07a9293" name="Прием данных" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="2ffe2f83-b91f-4195-82fa-f0facc339000" />
+      </Interface>
+    </modelContainsNamedElements>
+    <modelContainsNamedElements>
+      <Interface Id="45732570-a2dd-45f3-ad8e-dda99fad8a7b" name="Отправка данных" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="aabd580d-e9b6-476a-b52b-1c09ffae5655" />
+      </Interface>
+    </modelContainsNamedElements>
+    <componentModelHasComponents>
+      <component Id="fcaf6255-900b-48bc-bffb-e13413494776" name="Сервер" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="d077e2d8-1e26-4422-8670-001aba71d1d5" />
+        <ownedAttributesInternal>
+          <providedInterface Id="d5f7c573-bf98-4174-a0f5-336c09272caf" name="Port1" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isService="false" isBehavior="false">
+            <elementDefinition Id="6b43c532-ff2d-4354-a210-fee7d2b9faa2" />
+            <targetNamedElementsInternal>
+              <connector Id="6c3e6b03-8752-4375-b147-5bb073e44e65" isLeaf="false" isStatic="false">
+                <partMoniker Id="841d3b3a-af91-44cc-b561-c5d459b18e14" LastKnownName="Сервис WCF" />
+                <relationshipOwnedElementsInternal>
+                  <connectorHasConnectorEnds>
+                    <connectorEnd Id="3ece84f9-c6c3-4768-8d93-e317044b3e5b">
+                      <elementDefinition Id="eb769f83-d18d-4ed5-ae03-e8aae26cd45c" />
+                    </connectorEnd>
+                  </connectorHasConnectorEnds>
+                  <connectorHasConnectorEnds>
+                    <connectorEnd Id="0a6f6a6c-9d22-4b3f-834c-3e385fd0a2c4">
+                      <elementDefinition Id="b02a3d89-7e09-4fc7-a1ca-6f949a897c5c" />
+                      <portWithPart>
+                        <providedInterfaceMoniker Id="5c68a78d-12d8-46fb-b50e-dd8f1027c87e" LastKnownName="Port1" />
+                      </portWithPart>
+                    </connectorEnd>
+                  </connectorHasConnectorEnds>
+                </relationshipOwnedElementsInternal>
+                <elementDefinition Id="46d035bc-1d45-4f7b-9925-fdc18ad9a33b" />
+              </connector>
+            </targetNamedElementsInternal>
+            <type_NamedElement>
+              <interfaceMoniker Id="5767c6cb-37e0-4b68-96d9-6f59d7fb0c45" LastKnownName="Прием данных" />
+            </type_NamedElement>
+          </providedInterface>
+          <requiredInterface Id="3674d3ae-5ad3-44f7-8678-4950b80cf11f" name="Port2" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isService="false" isBehavior="false">
+            <elementDefinition Id="710e95c0-957c-4d24-829e-942fed8cae18" />
+            <suppliersInternal>
+              <dependency Id="0d1948e4-2ad9-43d3-bd6b-9a7cbef9d303">
+                <providedInterfaceMoniker Id="b5cceb4e-56a5-4634-bdcb-da2020635501" LastKnownName="Port1" />
+                <elementDefinition Id="bb46cce6-6400-4588-bf17-d8e8baf56967" />
+              </dependency>
+            </suppliersInternal>
+            <type_NamedElement>
+              <interfaceMoniker Id="a7b54809-fa0e-4379-92b6-e73a475366c4" LastKnownName="Отправка данных" />
+            </type_NamedElement>
+          </requiredInterface>
+          <part Id="841d3b3a-af91-44cc-b561-c5d459b18e14" name="Сервис WCF" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Composite" isComposite="true">
+            <elementDefinition Id="d88db27f-d074-4cd3-8029-040870531670" />
+            <targetNamedElementsInternal>
+              <connector Id="8b143f2a-6080-4990-a148-c0f66990792f" isLeaf="false" isStatic="false">
+                <requiredInterfaceMoniker Id="3674d3ae-5ad3-44f7-8678-4950b80cf11f" LastKnownName="Port2" />
+                <relationshipOwnedElementsInternal>
+                  <connectorHasConnectorEnds>
+                    <connectorEnd Id="7bb55f7f-4c06-40a9-a4f8-eef0cd06d569">
+                      <elementDefinition Id="10cb02fd-ebae-4e55-b6f5-f67a72079b49" />
+                      <portWithPart>
+                        <requiredInterfaceMoniker Id="40b0bea1-3640-433f-90b9-c7645cd5f1aa" LastKnownName="Port2" />
+                      </portWithPart>
+                    </connectorEnd>
+                  </connectorHasConnectorEnds>
+                  <connectorHasConnectorEnds>
+                    <connectorEnd Id="4dc9c171-fe80-4fed-97c9-fd9c400da6f9">
+                      <elementDefinition Id="e554a798-2257-421a-bc84-3a35d08e0d91" />
+                    </connectorEnd>
+                  </connectorHasConnectorEnds>
+                </relationshipOwnedElementsInternal>
+                <elementDefinition Id="e77e494f-5ce5-47f9-bc67-ca2ddfddf406" />
+              </connector>
+              <connector Id="965a406e-3517-4dc0-b6c4-f36a371be885" isLeaf="false" isStatic="false">
+                <partMoniker Id="5d0ed594-68bd-46ef-b4bd-979158012325" LastKnownName="DbConverter" />
+                <relationshipOwnedElementsInternal>
+                  <connectorHasConnectorEnds>
+                    <connectorEnd Id="53d230c2-5cf8-4b3d-835a-626bad6974ed">
+                      <elementDefinition Id="30ddeeb7-5d41-4907-8b79-75e511556ff6" />
+                      <portWithPart>
+                        <requiredInterfaceMoniker Id="9ac2675b-9996-4b14-b4f2-4bbb2044ab99" LastKnownName="Port4" />
+                      </portWithPart>
+                    </connectorEnd>
+                  </connectorHasConnectorEnds>
+                  <connectorHasConnectorEnds>
+                    <connectorEnd Id="22574112-5a7c-4755-b0e6-0cdb7c1e2ec2">
+                      <elementDefinition Id="3dd58992-acbc-4717-b9e1-106afcb6c78c" />
+                      <portWithPart>
+                        <providedInterfaceMoniker Id="d83448dc-ac03-44a6-a2be-da584dcf62dc" LastKnownName="Port2" />
+                      </portWithPart>
+                    </connectorEnd>
+                  </connectorHasConnectorEnds>
+                </relationshipOwnedElementsInternal>
+                <elementDefinition Id="f801a646-cc77-4d39-bdda-f538e02e2acc" />
+              </connector>
+            </targetNamedElementsInternal>
+            <type_NamedElement>
+              <componentMoniker Id="90e1e357-17d9-4904-bc83-8f387f5d9dff" LastKnownName="Component4" />
+            </type_NamedElement>
+          </part>
+          <part Id="7a2b1070-5244-42f3-b4cd-47f20c3967ef" name="ViewConverter" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Composite" isComposite="true">
+            <elementDefinition Id="bf4e0c25-405f-4afe-8a12-a1f34c193715" />
+            <targetNamedElementsInternal>
+              <connector Id="81efd128-068b-4cce-ac3e-aa6c966c2977" isLeaf="false" isStatic="false">
+                <partMoniker Id="841d3b3a-af91-44cc-b561-c5d459b18e14" LastKnownName="Сервис WCF" />
+                <relationshipOwnedElementsInternal>
+                  <connectorHasConnectorEnds>
+                    <connectorEnd Id="9faca9a2-9f4f-455d-b9df-523b23c6b3ba">
+                      <elementDefinition Id="0974a2a1-5435-4836-8bb4-80ef294e7b75" />
+                      <portWithPart>
+                        <requiredInterfaceMoniker Id="b4f1e1e2-130c-468e-8548-711cce2096e8" LastKnownName="Port2" />
+                      </portWithPart>
+                    </connectorEnd>
+                  </connectorHasConnectorEnds>
+                  <connectorHasConnectorEnds>
+                    <connectorEnd Id="b34f749b-f6b8-45e4-a53a-9e4e7c57de58">
+                      <elementDefinition Id="84c918d4-8d80-4f20-bdec-4070ce18a450" />
+                      <portWithPart>
+                        <providedInterfaceMoniker Id="29074434-2f4d-4c58-a33a-3872250e1533" LastKnownName="Port3" />
+                      </portWithPart>
+                    </connectorEnd>
+                  </connectorHasConnectorEnds>
+                </relationshipOwnedElementsInternal>
+                <elementDefinition Id="12d932e0-4c54-47b4-8e56-23122b06d63c" />
+              </connector>
+            </targetNamedElementsInternal>
+            <type_NamedElement>
+              <componentMoniker Id="1ff64be1-00dd-4256-88d0-ce15724895ee" LastKnownName="Component5" />
+            </type_NamedElement>
+          </part>
+          <part Id="5d0ed594-68bd-46ef-b4bd-979158012325" name="DbConverter" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Composite" isComposite="true">
+            <elementDefinition Id="0da946ad-849c-4d6f-9cea-0d07dddb7447" />
+            <targetNamedElementsInternal>
+              <connector Id="1f58b082-836e-44d5-9f92-be638b8656e7" isLeaf="false" isStatic="false">
+                <partMoniker Id="f740ca20-41ca-458a-8620-d6c331881ff5" LastKnownName="DataManager" />
+                <relationshipOwnedElementsInternal>
+                  <connectorHasConnectorEnds>
+                    <connectorEnd Id="a05fd42e-6f73-43a7-896d-2937ad630271">
+                      <elementDefinition Id="73ded8e0-f92d-4fa1-bcca-8f5a8e6c816a" />
+                      <portWithPart>
+                        <requiredInterfaceMoniker Id="0cc55602-401c-4886-8341-95669c6bed46" LastKnownName="Port1" />
+                      </portWithPart>
+                    </connectorEnd>
+                  </connectorHasConnectorEnds>
+                  <connectorHasConnectorEnds>
+                    <connectorEnd Id="6d90c27c-4cd6-429f-b42c-40942f3c1d4f">
+                      <elementDefinition Id="b7013753-f3aa-4c8f-9d1e-e9fe04c24666" />
+                      <portWithPart>
+                        <providedInterfaceMoniker Id="91b600b9-f4fc-4391-84f8-62758879acb1" LastKnownName="Port2" />
+                      </portWithPart>
+                    </connectorEnd>
+                  </connectorHasConnectorEnds>
+                </relationshipOwnedElementsInternal>
+                <elementDefinition Id="f42d55d3-7724-4076-9982-df07fee167a8" />
+              </connector>
+            </targetNamedElementsInternal>
+            <type_NamedElement>
+              <componentMoniker Id="dc6ca431-bfef-43d7-9dec-cb6f2d720122" LastKnownName="Component6" />
+            </type_NamedElement>
+          </part>
+          <part Id="f740ca20-41ca-458a-8620-d6c331881ff5" name="DataManager" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Composite" isComposite="true">
+            <elementDefinition Id="953eb7b8-8390-4ad4-8ee9-0280bebe1350" />
+            <targetNamedElementsInternal>
+              <connector Id="b610257f-0ebe-4749-a687-82c849c641df" isLeaf="false" isStatic="false">
+                <partMoniker Id="7a2b1070-5244-42f3-b4cd-47f20c3967ef" LastKnownName="ViewConverter" />
+                <relationshipOwnedElementsInternal>
+                  <connectorHasConnectorEnds>
+                    <connectorEnd Id="55d13e15-b162-427a-bd5d-31257c46fb44">
+                      <elementDefinition Id="8ac26fee-31a0-48ff-a3bf-98df73d48806" />
+                      <portWithPart>
+                        <requiredInterfaceMoniker Id="a5fd0166-f029-43bb-9255-46a8c6baa381" LastKnownName="Port1" />
+                      </portWithPart>
+                    </connectorEnd>
+                  </connectorHasConnectorEnds>
+                  <connectorHasConnectorEnds>
+                    <connectorEnd Id="84adcfad-beba-48ae-8ee3-d4c996566b0c">
+                      <elementDefinition Id="4d194410-4e76-49f0-9b52-1fc7e680fd35" />
+                      <portWithPart>
+                        <providedInterfaceMoniker Id="a0a62c03-d523-4bcf-823b-30e0f0784191" LastKnownName="Port1" />
+                      </portWithPart>
+                    </connectorEnd>
+                  </connectorHasConnectorEnds>
+                </relationshipOwnedElementsInternal>
+                <elementDefinition Id="d405dcf3-bb6e-46c9-ac27-1984aabc7de5" />
+              </connector>
+            </targetNamedElementsInternal>
+            <type_NamedElement>
+              <componentMoniker Id="2ad4b27b-d91c-4ca8-84f1-3039ae2f4fdc" LastKnownName="Component7" />
+            </type_NamedElement>
+          </part>
+        </ownedAttributesInternal>
+      </component>
+    </componentModelHasComponents>
+    <modelContainsNamedElements>
+      <Interface Id="5767c6cb-37e0-4b68-96d9-6f59d7fb0c45" name="Прием данных" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="c3b18609-5875-4a53-b674-727d5eb8fbd2" />
+      </Interface>
+    </modelContainsNamedElements>
+    <modelContainsNamedElements>
+      <Interface Id="a7b54809-fa0e-4379-92b6-e73a475366c4" name="Отправка данных" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="367ab94b-743d-4f3e-925a-9dcd8385bf2e" />
+      </Interface>
+    </modelContainsNamedElements>
+    <componentModelHasComponents>
+      <component Id="90e1e357-17d9-4904-bc83-8f387f5d9dff" name="Component4" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="aadb36eb-9e1d-4aad-a3b9-0393c28bc5ff" />
+        <ownedAttributesInternal>
+          <providedInterface Id="5c68a78d-12d8-46fb-b50e-dd8f1027c87e" name="Port1" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isService="false" isBehavior="false">
+            <elementDefinition Id="40aa6294-f7e3-42f2-a2d1-c4f03b1072ee" />
+            <type_NamedElement>
+              <interfaceMoniker Id="2dfa7c16-9b95-421f-939c-d1d07da0392a" LastKnownName="Прием данных" />
+            </type_NamedElement>
+          </providedInterface>
+          <requiredInterface Id="40b0bea1-3640-433f-90b9-c7645cd5f1aa" name="Port2" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isService="false" isBehavior="false">
+            <elementDefinition Id="0e61321f-e9dc-4b7e-b990-94de0c6e99ac" />
+            <type_NamedElement>
+              <interfaceMoniker Id="c5e7d2c3-a39e-4d6d-8cb5-42c0d1c8164e" LastKnownName="Отправка данных" />
+            </type_NamedElement>
+          </requiredInterface>
+          <providedInterface Id="29074434-2f4d-4c58-a33a-3872250e1533" name="Port3" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isService="false" isBehavior="false">
+            <elementDefinition Id="4d0ec73c-a687-4f3d-b027-d3834804500a" />
+            <type_NamedElement>
+              <interfaceMoniker Id="ebd758ac-add3-4c4e-adc8-7a95e487258f" LastKnownName="Прием данных" />
+            </type_NamedElement>
+          </providedInterface>
+          <requiredInterface Id="9ac2675b-9996-4b14-b4f2-4bbb2044ab99" name="Port4" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isService="false" isBehavior="false">
+            <elementDefinition Id="3faf7e04-da06-4ec5-9996-15938d3ecb42" />
+            <type_NamedElement>
+              <interfaceMoniker Id="39020455-0b47-439a-b95b-4cf467dd26fe" LastKnownName="Передача данных" />
+            </type_NamedElement>
+          </requiredInterface>
+        </ownedAttributesInternal>
+      </component>
+    </componentModelHasComponents>
+    <modelContainsNamedElements>
+      <Interface Id="2dfa7c16-9b95-421f-939c-d1d07da0392a" name="Прием данных" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="315a4598-589b-4e79-b49c-f1c1ca3f96b7" />
+      </Interface>
+    </modelContainsNamedElements>
+    <modelContainsNamedElements>
+      <Interface Id="c5e7d2c3-a39e-4d6d-8cb5-42c0d1c8164e" name="Отправка данных" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="95082145-0098-4709-8957-95dca0c615df" />
+      </Interface>
+    </modelContainsNamedElements>
+    <componentModelHasComponents>
+      <component Id="1ff64be1-00dd-4256-88d0-ce15724895ee" name="Component5" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="0a86d39a-4523-4631-b76b-177494ffb9fc" />
+        <ownedAttributesInternal>
+          <providedInterface Id="a0a62c03-d523-4bcf-823b-30e0f0784191" name="Port1" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isService="false" isBehavior="false">
+            <elementDefinition Id="822a38a3-021d-44a1-a795-990a74bdf700" />
+            <type_NamedElement>
+              <interfaceMoniker Id="a441a03d-5d26-40cf-96c4-545ef9aa3390" LastKnownName="Прием и обработка" />
+            </type_NamedElement>
+          </providedInterface>
+          <requiredInterface Id="b4f1e1e2-130c-468e-8548-711cce2096e8" name="Port2" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isService="false" isBehavior="false">
+            <elementDefinition Id="68faf36e-3a50-4a08-abc2-92b86499519e" />
+            <type_NamedElement>
+              <interfaceMoniker Id="5f8d231e-d10d-40bd-a506-4ac8c369ea7b" LastKnownName="Передача обработанных данных" />
+            </type_NamedElement>
+          </requiredInterface>
+        </ownedAttributesInternal>
+      </component>
+    </componentModelHasComponents>
+    <modelContainsNamedElements>
+      <Interface Id="a441a03d-5d26-40cf-96c4-545ef9aa3390" name="Прием и обработка" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="9b2f291b-4813-421a-9dc9-bf1eb4052b1e" />
+      </Interface>
+    </modelContainsNamedElements>
+    <modelContainsNamedElements>
+      <Interface Id="5f8d231e-d10d-40bd-a506-4ac8c369ea7b" name="Передача обработанных данных" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="abcdff38-20fa-4882-b1f7-1c8330c63376" />
+      </Interface>
+    </modelContainsNamedElements>
+    <modelContainsNamedElements>
+      <Interface Id="ebd758ac-add3-4c4e-adc8-7a95e487258f" name="Прием данных" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="cc82c522-b8a5-45b4-b294-20eb9cb426b1" />
+      </Interface>
+    </modelContainsNamedElements>
+    <modelContainsNamedElements>
+      <Interface Id="39020455-0b47-439a-b95b-4cf467dd26fe" name="Передача данных" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="da45b129-78f6-4063-bace-6b3171e3100f" />
+      </Interface>
+    </modelContainsNamedElements>
+    <componentModelHasComponents>
+      <component Id="dc6ca431-bfef-43d7-9dec-cb6f2d720122" name="Component6" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="77e833f6-a8ef-4023-81b3-b522bc75672a" />
+        <ownedAttributesInternal>
+          <requiredInterface Id="0cc55602-401c-4886-8341-95669c6bed46" name="Port1" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isService="false" isBehavior="false">
+            <elementDefinition Id="817ff7cf-e420-4076-b5fa-2ff77b64b08e" />
+            <type_NamedElement>
+              <interfaceMoniker Id="8c4b4f43-9785-4dcd-9ffd-01b13b75c0be" LastKnownName="Передача обработанных данных" />
+            </type_NamedElement>
+          </requiredInterface>
+          <providedInterface Id="d83448dc-ac03-44a6-a2be-da584dcf62dc" name="Port2" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isService="false" isBehavior="false">
+            <elementDefinition Id="2c70d018-59fe-45b9-81c0-62978f7c7443" />
+            <type_NamedElement>
+              <interfaceMoniker Id="135f8ae3-d834-45e8-afcf-15c7c77821de" LastKnownName="Прием и обработка " />
+            </type_NamedElement>
+          </providedInterface>
+        </ownedAttributesInternal>
+      </component>
+    </componentModelHasComponents>
+    <modelContainsNamedElements>
+      <Interface Id="8c4b4f43-9785-4dcd-9ffd-01b13b75c0be" name="Передача обработанных данных" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="753ac0d2-2656-4a8f-8672-a1a3292810aa" />
+      </Interface>
+    </modelContainsNamedElements>
+    <modelContainsNamedElements>
+      <Interface Id="135f8ae3-d834-45e8-afcf-15c7c77821de" name="Прием и обработка " isAbstract="false" isLeaf="false">
+        <elementDefinition Id="a186a19f-7281-47f8-b515-607ffe543044" />
+      </Interface>
+    </modelContainsNamedElements>
+    <componentModelHasComponents>
+      <component Id="2ad4b27b-d91c-4ca8-84f1-3039ae2f4fdc" name="Component7" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="4b34ae0c-7329-461c-a85a-ddb14de7537f" />
+        <ownedAttributesInternal>
+          <requiredInterface Id="a5fd0166-f029-43bb-9255-46a8c6baa381" name="Port1" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isService="false" isBehavior="false">
+            <elementDefinition Id="a4f7cf30-a4d8-4d89-8f23-158948408f9a" />
+            <type_NamedElement>
+              <interfaceMoniker Id="3e64d9ce-a4d5-4810-a8b2-cbc7ae1e2ca2" LastKnownName="Передача данных" />
+            </type_NamedElement>
+          </requiredInterface>
+          <providedInterface Id="91b600b9-f4fc-4391-84f8-62758879acb1" name="Port2" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isService="false" isBehavior="false">
+            <elementDefinition Id="7cae7fa6-e9a1-40b8-949b-6665f2a6c9c4" />
+            <type_NamedElement>
+              <interfaceMoniker Id="8e8a90fe-101e-4a8a-9f7e-54deebf68335" LastKnownName="Прием данных" />
+            </type_NamedElement>
+          </providedInterface>
+        </ownedAttributesInternal>
+      </component>
+    </componentModelHasComponents>
+    <modelContainsNamedElements>
+      <Interface Id="3e64d9ce-a4d5-4810-a8b2-cbc7ae1e2ca2" name="Передача данных" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="c54461db-a8b6-4069-a615-5148a6e34638" />
+      </Interface>
+    </modelContainsNamedElements>
+    <modelContainsNamedElements>
+      <Interface Id="8e8a90fe-101e-4a8a-9f7e-54deebf68335" name="Прием данных" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="6c28fd0e-b39a-4b71-b167-6ce93f3db4ba" />
+      </Interface>
+    </modelContainsNamedElements>
+  </packagedElements>
+  <package Id="155ed581-9254-4625-8c91-0eea522aac17" name="ModelingProject_TEST">
+    <elementDefinition Id="ce400d02-37d4-4911-8715-774920c3e6ad" />
+  </package>
+</componentModel>

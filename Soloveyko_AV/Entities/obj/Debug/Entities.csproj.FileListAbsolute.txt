@@ -14,6 +14,6 @@ G:\OOP\Курсовой_6сем\Soloveyko_AV\Entities\bin\Debug\EntityFramework.
 G:\OOP\Курсовой_6сем\Soloveyko_AV\Entities\bin\Debug\EntityFramework.SqlServer.dll
 G:\OOP\Курсовой_6сем\Soloveyko_AV\Entities\bin\Debug\EntityFramework.xml
 G:\OOP\Курсовой_6сем\Soloveyko_AV\Entities\bin\Debug\EntityFramework.SqlServer.xml
+G:\OOP\Курсовой_6сем\Soloveyko_AV\Entities\obj\Debug\Entities.csprojResolveAssemblyReference.cache
 G:\OOP\Курсовой_6сем\Soloveyko_AV\Entities\obj\Debug\Entities.dll
 G:\OOP\Курсовой_6сем\Soloveyko_AV\Entities\obj\Debug\Entities.pdb
-G:\OOP\Курсовой_6сем\Soloveyko_AV\Entities\obj\Debug\Entities.csprojResolveAssemblyReference.cache

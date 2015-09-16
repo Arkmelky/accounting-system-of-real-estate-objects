@@ -52,6 +52,8 @@
   <ItemGroup>
     <Compile Include="DataManager.cs" />
     <Compile Include="DB_Context.cs" />
+    <Compile Include="Factory\DatabaseContextHelper.cs" />
+    <Compile Include="GenericDataManager\GenericDataManager.cs" />
     <Compile Include="Migrations\201506021027419_InitialCreate.cs" />
     <Compile Include="Migrations\201506021027419_InitialCreate.Designer.cs">
       <DependentUpon>201506021027419_InitialCreate.cs</DependentUpon>

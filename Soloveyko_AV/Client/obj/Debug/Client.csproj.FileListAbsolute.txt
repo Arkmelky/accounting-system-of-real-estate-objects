@@ -32,8 +32,8 @@ G:\OOP\Курсовой_6сем\Soloveyko_AV\Client\obj\Debug\Client_MarkupCompi
 G:\OOP\Курсовой_6сем\Soloveyko_AV\Client\obj\Debug\Client_MarkupCompile.lref
 G:\OOP\Курсовой_6сем\Soloveyko_AV\Client\obj\Debug\MainWindow.baml
 G:\OOP\Курсовой_6сем\Soloveyko_AV\Client\obj\Debug\Client.g.resources
+G:\OOP\Курсовой_6сем\Soloveyko_AV\Client\obj\Debug\Client.ChartForm.ChartForm.resources
 G:\OOP\Курсовой_6сем\Soloveyko_AV\Client\obj\Debug\Client.Properties.Resources.resources
 G:\OOP\Курсовой_6сем\Soloveyko_AV\Client\obj\Debug\Client.csproj.GenerateResource.Cache
 G:\OOP\Курсовой_6сем\Soloveyko_AV\Client\obj\Debug\Client.exe
 G:\OOP\Курсовой_6сем\Soloveyko_AV\Client\obj\Debug\Client.pdb
-G:\OOP\Курсовой_6сем\Soloveyko_AV\Client\obj\Debug\Client.ChartForm.ChartForm.resources
