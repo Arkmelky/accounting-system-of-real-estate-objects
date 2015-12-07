@@ -42,20 +42,14 @@ namespace DataAccess.GenericDataManager
             DatabaseContextHelper.Dispose();
         }
 
-        public void Update(TEntity obj, int id)
+        public void Update(TEntity obj)
         {
             
             dbContext = DatabaseContextHelper.GetDbContext();
-            foreach (var o in dbContext.Set<TEntity>())
-            {
-                if (o.ID == obj.ID)
-                {
-                    //o;
-                }
+            var oldObject = dbContext.Set<TEntity>().Find(obj.ID);
+            dbContext.Entry(oldObject).CurrentValues.SetValues(obj);
 
-                DatabaseContextHelper.SaveChanges();
+            DatabaseContextHelper.SaveChanges();
             DatabaseContextHelper.Dispose();
         }
-
     }
-}
